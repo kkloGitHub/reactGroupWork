@@ -7,9 +7,12 @@
   color: #ffffff;
   padding: 80px 20px;
   text-align: center;
+  background: linear-gradient(135deg, #10897d1e 0%, #10897d89 100%), url(../images/Firefly_Coffee_View.jpg) top/cover no-repeat;
 }
-.hero-content { max-width: 600px; margin: 0 auto; }
-.hero-content h1 { font-size: 2.2rem; margin-bottom: 16px; }
+.hero-content { 
+    max-width: 600px; 
+    margin: 0 auto; }
+.hero-content h1 { font-size: 2.1rem; margin-bottom: 16px; }
 .hero-content p { font-size: 1.1rem; margin-bottom: 24px; line-height: 1.5; }
 .btn-primary {
   display: inline-block;
