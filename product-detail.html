@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>商品詳情 | 便利購</title>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/product.css">
+</head>
+<body>
+  <!-- ================= 頂部導覽列 (Navbar) ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">便利購 7-EASY</a>
+      
+      <!-- 桌機版主導覽連結 -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="fresh-food.html">鮮食便當</a></li>
+          <li><a href="cafe-drinks.html">咖啡飲品</a></li>
+          <li><a href="ecatalog.html">線上 DM</a></li>
+          <li><a href="lottery.html">幸運轉盤</a></li>
+        </ul>
+      </nav>
+
+      <!-- 示意用搜尋框 -->
+      <div class="search-box">
+        <input type="text" placeholder="搜尋鮮食、優惠...">
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <!-- 右側功能區 -->
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-link" title="購物車">🛒</a>
+        <a href="member.html" class="icon-link" title="會員中心">👤</a>
+        <button id="theme-toggle" class="theme-btn" title="切換明暗模式">🌓</button>
+        <!-- 漢堡選單按鈕 (手機版顯示) -->
+        <button id="hamburger-btn" class="hamburger-btn">🍔</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 手機版隱藏選單 -->
+  <nav id="mobile-menu" class="mobile-menu">
+    <ul>
+      <li><a href="fresh-food.html">🍱 鮮食便當</a></li>
+      <li><a href="cafe-drinks.html">☕ 咖啡飲品</a></li>
+      <li><a href="ecatalog.html">📖 線上 DM</a></li>
+      <li><a href="lottery.html">🎁 幸運轉盤</a></li>
+      <li><a href="cart.html">🛒 購物車</a></li>
+      <li><a href="member.html">👤 會員中心</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-container">
+    <!-- 使用 flex-wrap 達成簡單的 RWD 左圖右文 -->
+    <div style="display: flex; flex-wrap: wrap; gap: 40px; background: var(--bg-card); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color);">
+      
+      <!-- 左側：商品大圖 -->
+      <div style="flex: 1; min-width: 300px;">
+        <div style="width: 100%; aspect-ratio: 1/1; background-color: #ffd899; border-radius: 12px;"></div>
+      </div>
+      
+      <!-- 右側：商品資訊 -->
+      <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
+        <span style="background: var(--accent); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; width: fit-content; margin-bottom: 12px;">人氣熱銷</span>
+        <h1 style="font-size: 2rem; color: var(--text-main); margin-bottom: 16px;">極致微波排骨飯</h1>
+        <p style="color: var(--text-sub); line-height: 1.6; margin-bottom: 24px;">嚴選台灣在地豬肉，搭配獨門滷汁慢火熬煮，肉質軟嫩入味，配上香Q飽滿的越光米，是您午晚餐的最佳選擇。</p>
+        
+        <div style="font-size: 2.5rem; color: #fe010a; font-weight: bold; margin-bottom: 24px;">$89</div>
+        
+        <div style="display: flex; gap: 16px; margin-bottom: 24px;">
+          <input type="number" value="1" min="1" style="width: 80px; padding: 12px; font-size: 1.2rem; text-align: center; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-main); color: var(--text-main);">
+          <button style="flex: 1; background: var(--primary); color: white; border: none; border-radius: 6px; font-size: 1.2rem; font-weight: bold; cursor: pointer;">🛒 加入購物車</button>
+        </div>
+        
+        <p style="font-size: 0.9rem; color: var(--text-sub);">💡 滿 $200 即可享門市取貨免運費。</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= 頁尾 (Footer) ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>關於我們</h3>
+        <ul>
+          <li><a href="about.html">品牌故事</a></li>
+          <li><a href="stores.html">門市查詢</a></li>
+          <li><a href="#">人才招募</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>顧客服務</h3>
+        <ul>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="contact.html">聯絡客服</a></li>
+          <li><a href="#">退換貨政策</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>會員權益</h3>
+        <ul>
+          <li><a href="member.html">點數說明</a></li>
+          <li><a href="login.html">註冊/登入</a></li>
+          <li><a href="#">隱私權政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 便利購 7-EASY 版權所有.</p>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>

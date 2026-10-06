@@ -1,0 +1,125 @@
+/* ccs/product.css */
+
+/* === 內頁共用容器 === */
+.page-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 24px;
+  min-height: 50vh; /* 確保頁面內容太少時，Footer 不會整個縮到最上面 */
+}
+
+.page-title {
+  color: var(--primary);
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* === 文字內容區塊 (About / Terms) === */
+.simple-content-box {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  line-height: 1.8;
+}
+
+.simple-content-box h2 {
+  color: var(--text-main);
+  margin: 30px 0 10px;
+  font-size: 1.3rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 8px;
+}
+
+/* === 常見問題 FAQ 原生手風琴 === */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  padding: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: var(--bg-card);
+  color: var(--primary);
+  list-style: none; /* 隱藏預設箭頭 */
+  position: relative;
+}
+
+/* 自訂箭頭 */
+.faq-item summary::after {
+  content: '▼';
+  position: absolute;
+  right: 16px;
+  font-size: 0.8rem;
+}
+.faq-item[open] summary::after {
+  content: '▲';
+}
+
+.faq-answer {
+  padding: 16px;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-sub);
+}
+
+/* === 簡單商品列表 Grid === */
+.simple-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.simple-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+}
+
+.card-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.simple-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.simple-card .price {
+  color: #fe010a;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.btn-outline {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-outline:hover {
+  background: var(--primary);
+  color: #fff;
+}

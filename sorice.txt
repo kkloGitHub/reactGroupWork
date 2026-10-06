@@ -1,0 +1,36 @@
+--color-light-sea-green-50: #e8fcfa;
+--color-light-sea-green-100: #d1faf6;
+--color-light-sea-green-200: #a4f4ec;
+--color-light-sea-green-300: #76efe3;
+--color-light-sea-green-400: #48ead9;
+--color-light-sea-green-500: #1be4d0;
+--color-light-sea-green-600: #15b7a6;
+--color-light-sea-green-700: #10897d;
+--color-light-sea-green-800: #0b5b53;
+--color-light-sea-green-900: #052e2a;
+--color-light-sea-green-950: #04201d;
+
+--color-apricot-cream-50: #fff5e5;
+--color-apricot-cream-100: #ffebcc;
+--color-apricot-cream-200: #ffd899;
+--color-apricot-cream-300: #ffc466;
+--color-apricot-cream-400: #ffb133;
+--color-apricot-cream-500: #ff9d00;
+--color-apricot-cream-600: #cc7e00;
+--color-apricot-cream-700: #995e00;
+--color-apricot-cream-800: #663f00;
+--color-apricot-cream-900: #331f00;
+--color-apricot-cream-950: #241600;
+
+--color-grapefruit-pink-50: #ffe6e6;
+--color-grapefruit-pink-100: #ffccce;
+--color-grapefruit-pink-200: #fe9a9d;
+--color-grapefruit-pink-300: #fe676c;
+--color-grapefruit-pink-400: #fe343b;
+--color-grapefruit-pink-500: #fe010a;
+--color-grapefruit-pink-600: #cb0108;
+--color-grapefruit-pink-700: #980106;
+--color-grapefruit-pink-800: #650104;
+--color-grapefruit-pink-900: #330002;
+--color-grapefruit-pink-950: #240001;
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>聯絡客服 | 便利購</title>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/product.css">
+</head>
+<body>
+  <!-- ================= 頂部導覽列 (Navbar) ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">便利購 7-EASY</a>
+      
+      <!-- 桌機版主導覽連結 -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="fresh-food.html">鮮食便當</a></li>
+          <li><a href="cafe-drinks.html">咖啡飲品</a></li>
+          <li><a href="ecatalog.html">線上 DM</a></li>
+          <li><a href="lottery.html">幸運轉盤</a></li>
+        </ul>
+      </nav>
+
+      <!-- 示意用搜尋框 -->
+      <div class="search-box">
+        <input type="text" placeholder="搜尋鮮食、優惠...">
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <!-- 右側功能區 -->
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-link" title="購物車">🛒</a>
+        <a href="member.html" class="icon-link" title="會員中心">👤</a>
+        <button id="theme-toggle" class="theme-btn" title="切換明暗模式">🌓</button>
+        <!-- 漢堡選單按鈕 (手機版顯示) -->
+        <button id="hamburger-btn" class="hamburger-btn">🍔</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 手機版隱藏選單 -->
+  <nav id="mobile-menu" class="mobile-menu">
+    <ul>
+      <li><a href="fresh-food.html">🍱 鮮食便當</a></li>
+      <li><a href="cafe-drinks.html">☕ 咖啡飲品</a></li>
+      <li><a href="ecatalog.html">📖 線上 DM</a></li>
+      <li><a href="lottery.html">🎁 幸運轉盤</a></li>
+      <li><a href="cart.html">🛒 購物車</a></li>
+      <li><a href="member.html">👤 會員中心</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-container" style="max-width: 600px;">
+    <div class="simple-content-box">
+      <h1 class="page-title">聯絡客服</h1>
+      <p style="margin-bottom: 20px; color: var(--text-sub); text-align: center;">如果您有任何問題或建議，請填寫下方表單，我們將盡快回覆您。</p>
+      
+      <!-- 簡易表單結構 (搭配行內 CSS 以求簡化) -->
+      <form style="display: flex; flex-direction: column; gap: 16px;">
+        <input type="text" placeholder="您的姓名" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main);">
+        <input type="email" placeholder="電子郵件" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main);">
+        <select style="padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main);">
+          <option>請選擇問題類型</option>
+          <option>商品問題</option>
+          <option>門市服務</option>
+          <option>帳號與點數</option>
+        </select>
+        <textarea rows="5" placeholder="請詳細描述您的問題..." style="padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main);"></textarea>
+        
+        <button type="button" style="padding: 12px; background-color: var(--primary); color: white; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 10px;">送出訊息</button>
+      </form>
+    </div>
+  </main>
+
+  <!-- ================= 頁尾 (Footer) ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>關於我們</h3>
+        <ul>
+          <li><a href="about.html">品牌故事</a></li>
+          <li><a href="stores.html">門市查詢</a></li>
+          <li><a href="#">人才招募</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>顧客服務</h3>
+        <ul>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="contact.html">聯絡客服</a></li>
+          <li><a href="#">退換貨政策</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>會員權益</h3>
+        <ul>
+          <li><a href="member.html">點數說明</a></li>
+          <li><a href="login.html">註冊/登入</a></li>
+          <li><a href="#">隱私權政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 便利購 7-EASY 版權所有.</p>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>

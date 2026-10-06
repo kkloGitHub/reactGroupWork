@@ -1,0 +1,129 @@
+/* ccs/global.css */
+:root {
+  /* 借用您先前的色彩基底 */
+  --color-light-sea-green-50: #e8fcfa;
+  --color-light-sea-green-600: #15b7a6;
+  --color-light-sea-green-950: #04201d;
+  --color-apricot-cream-500: #ff9d00;
+  
+  /* 預設明亮模式變數 */
+  --bg-main: var(--color-light-sea-green-50);
+  --bg-card: #ffffff;
+  --text-main: var(--color-light-sea-green-950);
+  --primary: var(--color-light-sea-green-600);
+  --accent: var(--color-apricot-cream-500);
+  --nav-bg: #ffffff;
+  --border-color: #d1faf6;
+}
+
+[data-theme="dark"] {
+  --bg-main: var(--color-light-sea-green-950);
+  --bg-card: #0b5b53;
+  --text-main: #e8fcfa;
+  --primary: #1be4d0;
+  --nav-bg: #052e2a;
+  --border-color: #0b5b53;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  transition: background-color 0.3s, color 0.3s;
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+a { color: inherit; text-decoration: none; }
+
+/* === Navbar 導覽列 === */
+.navbar {
+  background-color: var(--nav-bg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky; top: 0; z-index: 1000;
+}
+.nav-container {
+  display: flex; align-items: center; justify-content: space-between;
+  max-width: 1200px; margin: 0 auto; padding: 12px 24px;
+}
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--primary); }
+
+.desktop-nav ul { display: flex; gap: 20px; list-style: none; }
+.desktop-nav a { font-weight: 500; transition: color 0.2s; }
+.desktop-nav a:hover { color: var(--primary); }
+
+.search-box {
+  display: flex; flex: 1; max-width: 300px; margin: 0 20px;
+  border: 2px solid var(--primary); border-radius: 20px; overflow: hidden;
+  background: var(--bg-card);
+}
+.search-box input { flex: 1; padding: 8px 16px; border: none; outline: none; background: transparent; color: var(--text-main); }
+.search-btn { background: var(--primary); color: #fff; border: none; padding: 8px 16px; cursor: pointer; }
+
+.nav-actions { display: flex; align-items: center; gap: 16px; }
+.icon-link, .theme-btn, .hamburger-btn { font-size: 1.25rem; background: none; border: none; cursor: pointer; }
+.hamburger-btn { display: none; } /* 預設桌機隱藏 */
+
+/* === 手機隱藏選單 === */
+.mobile-menu { display: none; background-color: var(--nav-bg); padding: 16px 24px; border-top: 1px solid var(--border-color); }
+.mobile-menu.active { display: block; }
+.mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+
+/* === Footer 頁尾 === */
+/* ccs/global.css (替換原有的 Footer 區塊) */
+
+/* === 極簡版 Footer 頁尾 === */
+.footer {
+  background-color: var(--nav-bg);
+  padding: 60px 24px 40px;
+  margin-top: 60px;
+  border-top: 1px solid var(--border-color);
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* 讓三欄均勻分佈 */
+  max-width: 1000px; /* 縮小寬度讓視覺更集中 */
+  margin: 0 auto;
+  gap: 40px;
+}
+.footer-col {
+  flex: 1;
+  min-width: 150px;
+  text-align: left;
+}
+.footer-col h3 {
+  /* 湖水綠標題 */
+  color: var(--primary);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.footer-col a {
+  /* 深灰文字 */
+  color: var(--text-main);
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.footer-col a:hover {
+  color: var(--primary);
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
+
+/* === RWD === */
+@media (max-width: 900px) {
+  .desktop-nav { display: none; }
+  .search-box { display: none; }
+  .hamburger-btn { display: block; }
+}

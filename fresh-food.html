@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>鮮食便當 | 便利購</title>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/product.css">
+</head>
+<body>
+  <!-- ================= 頂部導覽列 (Navbar) ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">便利購 7-EASY</a>
+      
+      <!-- 桌機版主導覽連結 -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="fresh-food.html">鮮食便當</a></li>
+          <li><a href="cafe-drinks.html">咖啡飲品</a></li>
+          <li><a href="ecatalog.html">線上 DM</a></li>
+          <li><a href="lottery.html">幸運轉盤</a></li>
+        </ul>
+      </nav>
+
+      <!-- 示意用搜尋框 -->
+      <div class="search-box">
+        <input type="text" placeholder="搜尋鮮食、優惠...">
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <!-- 右側功能區 -->
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-link" title="購物車">🛒</a>
+        <a href="member.html" class="icon-link" title="會員中心">👤</a>
+        <button id="theme-toggle" class="theme-btn" title="切換明暗模式">🌓</button>
+        <!-- 漢堡選單按鈕 (手機版顯示) -->
+        <button id="hamburger-btn" class="hamburger-btn">🍔</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 手機版隱藏選單 -->
+  <nav id="mobile-menu" class="mobile-menu">
+    <ul>
+      <li><a href="fresh-food.html">🍱 鮮食便當</a></li>
+      <li><a href="cafe-drinks.html">☕ 咖啡飲品</a></li>
+      <li><a href="ecatalog.html">📖 線上 DM</a></li>
+      <li><a href="lottery.html">🎁 幸運轉盤</a></li>
+      <li><a href="cart.html">🛒 購物車</a></li>
+      <li><a href="member.html">👤 會員中心</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-container">
+    <h1 class="page-title">🍱 鮮食便當專區</h1>
+    
+    <div class="simple-product-grid">
+      <!-- 基礎商品卡片 1 -->
+      <div class="simple-card">
+        <div class="card-placeholder" style="background-color: #ffccce;"></div>
+        <h3>極致微波排骨飯</h3>
+        <p class="price">$89</p>
+        <button class="btn-outline">加入購物車</button>
+      </div>
+      <!-- 基礎商品卡片 2 -->
+      <div class="simple-card">
+        <div class="card-placeholder" style="background-color: #ffd899;"></div>
+        <h3>健康舒肥雞胸沙拉</h3>
+        <p class="price">$75</p>
+        <button class="btn-outline">加入購物車</button>
+      </div>
+      <!-- 基礎商品卡片 3 -->
+      <div class="simple-card">
+        <div class="card-placeholder" style="background-color: #a4f4ec;"></div>
+        <h3>經典奮起湖便當</h3>
+        <p class="price">$99</p>
+        <button class="btn-outline">加入購物車</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= 頁尾 (Footer) ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>關於我們</h3>
+        <ul>
+          <li><a href="about.html">品牌故事</a></li>
+          <li><a href="stores.html">門市查詢</a></li>
+          <li><a href="#">人才招募</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>顧客服務</h3>
+        <ul>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="contact.html">聯絡客服</a></li>
+          <li><a href="#">退換貨政策</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>會員權益</h3>
+        <ul>
+          <li><a href="member.html">點數說明</a></li>
+          <li><a href="login.html">註冊/登入</a></li>
+          <li><a href="#">隱私權政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 便利購 7-EASY 版權所有.</p>
+    </div>
+  </footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>

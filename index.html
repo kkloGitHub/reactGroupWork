@@ -1,84 +1,162 @@
-html<!DOCTYPE html>
-<html lang="zh-TW">
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>快捷便利商店 | 您的24小時好鄰居</title>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>響應式便利商店網站</title>
+  <!-- 引入 Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- 引入共用與首頁專屬樣式 (依照您的 ccs 資料夾命名) -->
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
 
-    <!-- 導覽列 -->
-    <header class="navbar">
-        <div class="logo">🏪 快捷便利商店</div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#" class="active">首頁</a></li>
-                <li><a href="#">當期優惠</a></li>
-                <li><a href="#">美味鮮食</a></li>
-                <li><a href="#">門市查詢</a></li>
-                <li><a href="#">聯絡我們</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- ================= 頂部導覽列 (Navbar) ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">便利購 7-EASY</a>
+      
+      <!-- 桌機版主導覽連結 -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="fresh-food.html">鮮食便當</a></li>
+          <li><a href="cafe-drinks.html">咖啡飲品</a></li>
+          <li><a href="ecatalog.html">線上 DM</a></li>
+          <li><a href="lottery.html">幸運轉盤</a></li>
+        </ul>
+      </nav>
 
-    <!-- 主視覺橫幅 -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>美味新上市！溫暖您的每一天</h1>
-            <p>全新現煮咖啡與現烤烘焙，24小時隨時為您應援。</p>
-            <a href="#" class="btn">查看最新優惠</a>
-        </div>
+      <!-- 示意用搜尋框 -->
+      <div class="search-box">
+        <input type="text" placeholder="搜尋鮮食、優惠...">
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <!-- 右側功能區 -->
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-link" title="購物車">🛒</a>
+        <a href="member.html" class="icon-link" title="會員中心">👤</a>
+        <button id="theme-toggle" class="theme-btn" title="切換明暗模式">🌓</button>
+        <!-- 漢堡選單按鈕 (手機版顯示) -->
+        <button id="hamburger-btn" class="hamburger-btn">🍔</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 手機版隱藏選單 -->
+  <nav id="mobile-menu" class="mobile-menu">
+    <ul>
+      <li><a href="fresh-food.html">🍱 鮮食便當</a></li>
+      <li><a href="cafe-drinks.html">☕ 咖啡飲品</a></li>
+      <li><a href="ecatalog.html">📖 線上 DM</a></li>
+      <li><a href="lottery.html">🎁 幸運轉盤</a></li>
+      <li><a href="cart.html">🛒 購物車</a></li>
+      <li><a href="member.html">👤 會員中心</a></li>
+    </ul>
+  </nav>
+
+  <!-- ================= 中間主要版面 (Main Content) ================= -->
+  <main>
+    <!-- 主視覺 Banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1>秋季限定！栗子風味拿鐵新上市</h1>
+        <p>即日起至 11/31，CITY CAFE 全品項第二杯半價，立即選購您的專屬風味。</p>
+        <a href="cafe-drinks.html" class="btn-primary">立即查看</a>
+      </div>
     </section>
 
-    <!-- 商品分類 -->
-    <section class="categories">
-        <h2 class="section-title">嚴選分類</h2>
+    <!-- 快速分類入口 (Grid) -->
+    <section class="quick-categories">
+      <div class="container">
+        <h2>商品快速分類</h2>
         <div class="category-grid">
-            <div class="category-card">
-                <div class="icon">☕</div>
-                <h3>現煮咖啡</h3>
-            </div>
-            <div class="category-card">
-                <div class="icon">🍱</div>
-                <h3>美味鮮食</h3>
-            </div>
-            <div class="category-card">
-                <div class="icon">🍦</div>
-                <h3>人氣甜點</h3>
-            </div>
-            <div class="category-card">
-                <div class="icon">零食</div>
-                <h3>休閒零嘴</h3>
-            </div>
+          <a href="fresh-food.html" class="category-card">🍱 鮮食專區</a>
+          <a href="cafe-drinks.html" class="category-card">☕ 現煮咖啡</a>
+          <a href="ecatalog.html" class="category-card">🍪 零食泡麵</a>
+          <a href="lottery.html" class="category-card">🎁 每日抽獎</a>
         </div>
+      </div>
     </section>
 
-    <!-- 本期特惠 -->
-    <section class="promotions">
-        <h2 class="section-title">本期主打優惠</h2>
-        <div class="promo-grid">
-            <div class="promo-card">
-                <span class="badge">買一送一</span>
-                <div class="promo-info">
-                    <h3>活力美式咖啡</h3>
-                    <p>限時優惠，開啟充滿活力的一天。</p>
-                </div>
-            </div>
-            <div class="promo-card">
-                <span class="badge">第二件6折</span>
-                <div class="promo-info">
-                    <h3>日式精緻便當</h3>
-                    <p>嚴選在地食材，天天吃都不會膩。</p>
-                </div>
-            </div>
+    <!-- 滾動式推薦商品 (Horizontal Scroll) -->
+    <section class="recommendations">
+      <div class="container">
+        <h2>🔥 熱門推薦商品</h2>
+        <div class="scroll-container">
+          <!-- 商品卡片 1 -->
+          <a href="product-detail.html" class="scroll-card">
+            <div class="card-img" style="background-color: #ffccce;"></div>
+            <h3>特選重烘焙拿鐵</h3>
+            <p class="price">$55</p>
+          </a>
+          <!-- 商品卡片 2 -->
+          <a href="product-detail.html" class="scroll-card">
+            <div class="card-img" style="background-color: #ffd899;"></div>
+            <h3>極致微波紅燒牛腩飯</h3>
+            <p class="price">$89</p>
+          </a>
+          <!-- 商品卡片 3 -->
+          <a href="product-detail.html" class="scroll-card">
+            <div class="card-img" style="background-color: #a4f4ec;"></div>
+            <h3>皇家錫蘭午後紅茶</h3>
+            <p class="price">$35</p>
+          </a>
+          <!-- 商品卡片 4 -->
+          <a href="product-detail.html" class="scroll-card">
+            <div class="card-img" style="background-color: #ffccce;"></div>
+            <h3>厚切海鹽洋芋片</h3>
+            <p class="price">$45</p>
+          </a>
+          <!-- 商品卡片 5 -->
+          <a href="product-detail.html" class="scroll-card">
+            <div class="card-img" style="background-color: #ffd899;"></div>
+            <h3>北海道十勝限定冰淇淋</h3>
+            <p class="price">$60</p>
+          </a>
         </div>
+      </div>
     </section>
+  </main>
 
-    <!-- 頁尾 -->
-    <footer class="footer">
-        <p>&copy; 2026 快捷便利商店 版權所有。 24小時竭誠為您服務。</p>
-    </footer>
+  <!-- ================= 頁尾 (Footer) ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>關於我們</h3>
+        <ul>
+          <li><a href="about.html">品牌故事</a></li>
+          <li><a href="stores.html">門市查詢</a></li>
+          <li><a href="#">人才招募</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>顧客服務</h3>
+        <ul>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="contact.html">聯絡客服</a></li>
+          <li><a href="#">退換貨政策</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>會員權益</h3>
+        <ul>
+          <li><a href="member.html">點數說明</a></li>
+          <li><a href="login.html">註冊/登入</a></li>
+          <li><a href="#">隱私權政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 便利購 7-EASY 版權所有.</p>
+    </div>
+  </footer>
 
+  <!-- 引入 JS (依照您的 js 資料夾架構) -->
+  <script src="./js/main.js"></script>
 </body>
 </html>

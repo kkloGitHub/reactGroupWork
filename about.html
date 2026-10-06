@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>品牌故事 | 便利購</title>
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/product.css"> <!-- 引入子頁面專用樣式 -->
+</head>
+<body>
+  <!-- ================= 頂部導覽列 (Navbar) ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">便利購 7-EASY</a>
+      
+      <!-- 桌機版主導覽連結 -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="fresh-food.html">鮮食便當</a></li>
+          <li><a href="cafe-drinks.html">咖啡飲品</a></li>
+          <li><a href="ecatalog.html">線上 DM</a></li>
+          <li><a href="lottery.html">幸運轉盤</a></li>
+        </ul>
+      </nav>
+
+      <!-- 示意用搜尋框 -->
+      <div class="search-box">
+        <input type="text" placeholder="搜尋鮮食、優惠...">
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <!-- 右側功能區 -->
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-link" title="購物車">🛒</a>
+        <a href="member.html" class="icon-link" title="會員中心">👤</a>
+        <button id="theme-toggle" class="theme-btn" title="切換明暗模式">🌓</button>
+        <!-- 漢堡選單按鈕 (手機版顯示) -->
+        <button id="hamburger-btn" class="hamburger-btn">🍔</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 手機版隱藏選單 -->
+  <nav id="mobile-menu" class="mobile-menu">
+    <ul>
+      <li><a href="fresh-food.html">🍱 鮮食便當</a></li>
+      <li><a href="cafe-drinks.html">☕ 咖啡飲品</a></li>
+      <li><a href="ecatalog.html">📖 線上 DM</a></li>
+      <li><a href="lottery.html">🎁 幸運轉盤</a></li>
+      <li><a href="cart.html">🛒 購物車</a></li>
+      <li><a href="member.html">👤 會員中心</a></li>
+    </ul>
+  </nav>
+
+  <main class="page-container">
+    <div class="simple-content-box">
+      <h1 class="page-title">關於便利購 7-EASY</h1>
+      <p>成立於 2026 年，我們致力於為每一位顧客提供最便捷、最優質的日常服務。</p>
+      
+      <h2>我們的使命</h2>
+      <p>無論是清晨的一杯熱咖啡，還是深夜的一碗暖湯，便利購始終在街角守候，成為您生活中最可靠的夥伴。</p>
+      
+      <h2>永續經營</h2>
+      <p>我們積極推動減碳計畫，全面使用可回收包材，為地球盡一份心力。</p>
+    </div>
+  </main>
+
+  <!-- ================= 頁尾 (Footer) ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>關於我們</h3>
+        <ul>
+          <li><a href="about.html">品牌故事</a></li>
+          <li><a href="stores.html">門市查詢</a></li>
+          <li><a href="#">人才招募</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>顧客服務</h3>
+        <ul>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="contact.html">聯絡客服</a></li>
+          <li><a href="#">退換貨政策</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>會員權益</h3>
+        <ul>
+          <li><a href="member.html">點數說明</a></li>
+          <li><a href="login.html">註冊/登入</a></li>
+          <li><a href="#">隱私權政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 便利購 7-EASY 版權所有.</p>
+    </div>
+  </footer>
+  
+  <script src="./js/main.js"></script>
+</body>
+</html>
