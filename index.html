@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>響應式便利商店網站</title>
+  <title>88便利商店網站</title>
   <!-- 引入 Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,27 +47,27 @@
 
       <!-- 右側功能區 -->
       <div class="nav-actions">
-        <a href="cart.html" class="icon-link" title="購物車">🛒</a>
-        <a href="member.html" class="icon-link" title="會員中心">👤</a>
+        <a href="cart.html" class="icon-link" title="購物車"><span class="material-symbols-outlined shopping-cart">shopping_cart</span></a>
+        <a href="member.html" class="icon-link" title="會員中心"><span class="material-symbols-outlined member">person</span></a>
         <button id="theme-toggle" class="theme-btn" title="切換明暗模式"><span class="material-symbols-outlined darklight">contrast</span></button>
         <!-- 漢堡選單按鈕 (手機版顯示) -->
-        <button id="hamburger-btn" class="hamburger-btn"><span class="material-symbols-outlined hanburger-menu">menu
-</span></button>
+        <button id="hamburger-btn" class="hamburger-btn"><span class="material-symbols-outlined hanburger-menu">menu</span>
+        </button>
       </div>
+      <nav id="mobile-menu" class="mobile-menu">
+        <ul>
+          <li><a href="fresh-food.html"><span class="material-symbols-outlined">briefcase_meal</span> 鮮食便當</a></li>
+          <li><a href="cafe-drinks.html"><span class="material-symbols-outlined">local_cafe</span> 咖啡飲品</a></li>
+          <li><a href="ecatalog.html"><span class="material-symbols-outlined">menu_book</span> 線上 DM</a></li>
+          <li><a href="lottery.html"><span class="material-symbols-outlined">featured_seasonal_and_gifts</span> 幸運轉盤</a></li>
+          <li><a href="cart.html"><span class="material-symbols-outlined shopping-cart">shopping_cart</span> 購物車</a></li>
+          <li><a href="member.html"><span class="material-symbols-outlined member">person</span> 會員中心</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
   <!-- 手機版隱藏選單 -->
-  <nav id="mobile-menu" class="mobile-menu">
-    <ul>
-      <li><a href="fresh-food.html">🍱 鮮食便當</a></li>
-      <li><a href="cafe-drinks.html">☕ 咖啡飲品</a></li>
-      <li><a href="ecatalog.html">📖 線上 DM</a></li>
-      <li><a href="lottery.html">🎁 幸運轉盤</a></li>
-      <li><a href="cart.html">🛒 購物車</a></li>
-      <li><a href="member.html">👤 會員中心</a></li>
-    </ul>
-  </nav>
 
   <!-- ================= 中間主要版面 (Main Content) ================= -->
   <main>
@@ -75,7 +75,7 @@
     <section class="hero-banner">
       <div class="hero-content">
         <h1>秋季限定！栗子風味拿鐵新上市</h1>
-        <p>即日起至 11/31，CITY CAFE 全品項第二杯半價，立即選購您的專屬風味。</p>
+        <p>即日起至 11/31，88 CAFE 全品項第二杯半價，立即選購您的專屬風味。</p>
         <a href="cafe-drinks.html" class="btn-primary">立即查看</a>
       </div>
     </section>
@@ -85,10 +85,10 @@
       <div class="container">
         <h2>商品快速分類</h2>
         <div class="category-grid">
-          <a href="fresh-food.html" class="category-card">🍱 鮮食專區</a>
-          <a href="cafe-drinks.html" class="category-card">☕ 現煮咖啡</a>
-          <a href="ecatalog.html" class="category-card">🍪 零食泡麵</a>
-          <a href="lottery.html" class="category-card">🎁 每日抽獎</a>
+          <a href="fresh-food.html" class="category-card"><span class="material-symbols-outlined">briefcase_meal</span> 鮮食專區</a>
+          <a href="cafe-drinks.html" class="category-card"><span class="material-symbols-outlined">local_cafe</span> 現煮咖啡</a>
+          <a href="ecatalog.html" class="category-card"><span class="material-symbols-outlined">udon</span> 零食泡麵</a>
+          <a href="lottery.html" class="category-card"><span class="material-symbols-outlined">featured_seasonal_and_gifts</span> 每日抽獎</a>
         </div>
       </div>
     </section>
@@ -162,7 +162,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 便利購 7-EASY 版權所有.</p>
+      <p>&copy; 2026 88便利店 版權所有.</p>
     </div>
   </footer>
 

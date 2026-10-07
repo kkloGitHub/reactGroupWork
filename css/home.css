@@ -45,6 +45,12 @@
   font-size: 1.2rem;
   font-weight: bold;
   transition: transform 0.2s;
+  span.material-symbols-outlined {
+    font-size: 1.8rem;
+    transform: translateY(8px);
+    margin-bottom: 12px;
+    color: var(--primary);
+  }
 }
 .category-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
 
