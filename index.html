@@ -8,6 +8,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   
   <!-- 引入共用與首頁專屬樣式 (依照您的 ccs 資料夾命名) -->
   <link rel="stylesheet" href="./css/global.css">
@@ -18,8 +21,14 @@
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="index.html" class="logo">便利購 7-EASY</a>
-      
+      <a href="index.html" class="logo">
+        <img src="./images/LOGO_88.png" alt="88便利店 Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-main">88便利店</span>
+          <span class="logo-sub">88 CONVENIENCE</span>
+        </div>
+      </a>
+
       <!-- 桌機版主導覽連結 -->
       <nav class="desktop-nav">
         <ul>
@@ -40,9 +49,10 @@
       <div class="nav-actions">
         <a href="cart.html" class="icon-link" title="購物車">🛒</a>
         <a href="member.html" class="icon-link" title="會員中心">👤</a>
-        <button id="theme-toggle" class="theme-btn" title="切換明暗模式">🌓</button>
+        <button id="theme-toggle" class="theme-btn" title="切換明暗模式"><span class="material-symbols-outlined darklight">contrast</span></button>
         <!-- 漢堡選單按鈕 (手機版顯示) -->
-        <button id="hamburger-btn" class="hamburger-btn">🍔</button>
+        <button id="hamburger-btn" class="hamburger-btn"><span class="material-symbols-outlined hanburger-menu">menu
+</span></button>
       </div>
     </div>
   </header>
