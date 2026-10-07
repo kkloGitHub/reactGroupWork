@@ -1,0 +1,73 @@
+.page-container {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  .lottery-fword {
+    color: var(--text-sub);
+    margin-bottom: 40px;
+  }
+}
+/* 新增外層定位框 */
+.lottery-box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+/* 將原本的 .lottery-wheel .lottery-pointer 改為 .lottery-box .lottery-pointer */
+.lottery-box .lottery-pointer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 40px solid #fe010a;
+  z-index: 10;
+}
+
+/* 轉盤本體加上 CSS 平滑轉動過渡 (4秒緩動減速) */
+.lottery-wheel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 8px solid var(--primary);
+  border-radius: 50%;
+  background: url('../images/lottery_BG.png') center/cover no-repeat;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 關鍵動畫：轉動由快漸慢，非常逼真 */
+  transition: transform 4s cubic-bezier(0.17, 0.67, 0.12, 0.99);
+}
+.lottery-wheel .lottery-button {
+  width: 80px;
+  height: 80px;
+  background: var(--accent);
+  color: white;
+  border: 4px solid white;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 5;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.lottery-wheel .lottery-button:hover {
+  background: var(--primary);
+}
+.lottery-results {
+  margin-top: 40px;
+  background: var(--bg-card);
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}

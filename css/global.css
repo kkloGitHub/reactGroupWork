@@ -37,6 +37,10 @@ body {
 }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 a { color: inherit; text-decoration: none; }
+.material-symbols-outlined { 
+  font-size: inherit;
+  transform: translateY(4px);
+}
 
 /* === Navbar 導覽列 === */
 .navbar {
@@ -71,7 +75,14 @@ a { color: inherit; text-decoration: none; }
   background: var(--bg-card);
 }
 .search-box input { flex: 1; padding: 8px 16px; border: none; outline: none; background: transparent; color: var(--text-main); }
-.search-btn { background: var(--primary); color: #fff; border: none; padding: 8px 16px; cursor: pointer; }
+.search-btn { 
+  background: var(--primary); 
+  color: #fff; 
+  border: none; 
+  padding: 8px 16px; 
+  cursor: pointer; 
+  .material-symbols-outlined { font-size: 1.5rem; transform: translate(-4px, 4px); }
+}
 
 .nav-actions { display: flex; align-items: center; gap: 16px; }
 .icon-link, .theme-btn, .hamburger-btn { font-size: 1.25rem; background: none; border: none; cursor: pointer; }

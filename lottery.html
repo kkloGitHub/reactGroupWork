@@ -3,9 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
   <title>幸運轉盤 | 便利購</title>
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/lottery.css">
 </head>
 <body>
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
@@ -32,7 +39,7 @@
       <!-- 示意用搜尋框 -->
       <div class="search-box">
         <input type="text" placeholder="搜尋鮮食、優惠...">
-        <button class="search-btn">🔍</button>
+        <button class="search-btn"><span class="material-symbols-outlined">search</span></button>
       </div>
 
       <!-- 右側功能區 -->
@@ -57,35 +64,21 @@
     </div>
   </header>
 
-  <!-- 手機版隱藏選單 -->
-  <nav id="mobile-menu" class="mobile-menu">
-    <ul>
-      <li><a href="fresh-food.html">🍱 鮮食便當</a></li>
-      <li><a href="cafe-drinks.html">☕ 咖啡飲品</a></li>
-      <li><a href="ecatalog.html">📖 線上 DM</a></li>
-      <li><a href="lottery.html">🎁 幸運轉盤</a></li>
-      <li><a href="cart.html">🛒 購物車</a></li>
-      <li><a href="member.html">👤 會員中心</a></li>
-    </ul>
-  </nav>
+  <main class="page-container">
+    <h1 class="page-title"><span class="material-symbols-outlined">featured_seasonal_and_gifts</span> 每日抽抽樂 幸運轉盤</h1>
+    <p class="lottery-fword">每天登入試試手氣，最高可抽中商品 0 元！</p>
+    <!-- 將 lottery.html 中的轉盤區塊改為以下結構 -->
+    <div class="lottery-box">
+      <!-- 頂部指針 (固定在上方，不隨轉盤轉動) -->
+      <div class="lottery-pointer"></div>
 
-  <main class="page-container" style="text-align: center;">
-    <h1 class="page-title">🎁 每日抽抽樂 幸運轉盤</h1>
-    <p style="color: var(--text-sub); margin-bottom: 40px;">每天登入試試手氣，最高可抽中商品 0 元！</p>
-    
-    <!-- 轉盤外框 -->
-    <div style="position: relative; width: 300px; height: 300px; margin: 0 auto; border: 8px solid var(--primary); border-radius: 50%; background: conic-gradient(var(--bg-card) 0deg 90deg, #ffebcc 90deg 180deg, var(--bg-card) 180deg 270deg, #ffebcc 270deg 360deg); box-shadow: 0 10px 30px rgba(0,0,0,0.1); display: flex; justify-content: center; align-items: center;">
-      
-      <!-- 頂部指針 -->
-      <div style="position: absolute; top: -20px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 20px solid transparent; border-right: 20px solid transparent; border-top: 40px solid #fe010a; z-index: 10;"></div>
-      
-      <!-- 中間抽獎按鈕 -->
-      <button style="width: 80px; height: 80px; background: var(--accent); color: white; border: 4px solid white; border-radius: 50%; font-size: 1.2rem; font-weight: bold; cursor: pointer; z-index: 5; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">GO</button>
+      <!-- 轉動的圓盤本體 -->
+      <div class="lottery-wheel" id="lottery-wheel">
+        <!-- 中間抽獎按鈕 -->
+        <button class="lottery-button" id="lottery-btn">GO</button>
+      </div>
     </div>
-    
-    <div style="margin-top: 40px; background: var(--bg-card); padding: 20px; border: 1px solid var(--border-color); border-radius: 12px; max-width: 400px; margin-left: auto; margin-right: auto;">
-      <h3 style="color: var(--text-main); margin-bottom: 10px;">中獎紀錄</h3>
-      <p style="color: var(--text-sub);">尚無中獎紀錄，快點擊 GO 開始抽獎吧！</p>
+    <div class="lottery-results"><p>尚無中獎紀錄，快點擊 GO 開始抽獎吧！</p>
     </div>
   </main>
 
@@ -122,5 +115,6 @@
     </div>
   </footer>
   <script src="./js/main.js"></script>
+  <script src="./js/lottery.js"></script>
 </body>
 </html>
