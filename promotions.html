@@ -12,6 +12,7 @@
   <title>優惠活動 | 便利購</title>
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/others.css">
 </head>
 <body>
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
@@ -66,24 +67,24 @@
   <main class="page-container">
     <h1 class="page-title">🎉 本期優惠活動</h1>
     
-    <div style="display: flex; flex-direction: column; gap: 24px;">
+    <div class="promo-list">
       
       <!-- 活動卡片 1 -->
-      <a href="#" style="display: block; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; transition: transform 0.2s;">
+      <a href="#" class="promo-card">
         <!-- 活動圖佔位 -->
-        <div style="width: 100%; height: 200px; background-color: var(--primary);"></div>
-        <div style="padding: 20px;">
-          <h2 style="font-size: 1.5rem; color: var(--text-main); margin-bottom: 8px;">咖啡全品項 第二杯半價</h2>
-          <p style="color: var(--text-sub);">活動期間：即日起至 11/31。限同品項、同規格。</p>
+        <div class="promo-card-image promo-card-image-primary"></div>
+        <div class="promo-card-body">
+          <h2 class="promo-card-title">咖啡全品項 第二杯半價</h2>
+          <p class="promo-card-text">活動期間：即日起至 11/31。限同品項、同規格。</p>
         </div>
       </a>
 
       <!-- 活動卡片 2 -->
-      <a href="#" style="display: block; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; transition: transform 0.2s;">
-        <div style="width: 100%; height: 200px; background-color: var(--accent);"></div>
-        <div style="padding: 20px;">
-          <h2 style="font-size: 1.5rem; color: var(--text-main); margin-bottom: 8px;">深夜食堂 鮮食便當8折</h2>
-          <p style="color: var(--text-sub);">活動期間：每日 20:00 至 24:00，指定鮮食打折。</p>
+      <a href="#" class="promo-card">
+        <div class="promo-card-image promo-card-image-accent"></div>
+        <div class="promo-card-body">
+          <h2 class="promo-card-title">深夜食堂 鮮食便當8折</h2>
+          <p class="promo-card-text">活動期間：每日 20:00 至 24:00，指定鮮食打折。</p>
         </div>
       </a>
 
@@ -106,7 +107,7 @@
         <ul>
           <li><a href="faq.html">常見問題</a></li>
           <li><a href="contact.html">聯絡客服</a></li>
-          <li><a href="#">退換貨政策</a></li>
+          <li><a href="returnpolicy.html">消費者保障</a></li>
         </ul>
       </div>
       <div class="footer-col">

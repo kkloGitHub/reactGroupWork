@@ -12,6 +12,7 @@
   <title>商品詳情 | 便利購</title>
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/others.css">
 </head>
 <body>
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
@@ -65,27 +66,27 @@
 
   <main class="page-container">
     <!-- 使用 flex-wrap 達成簡單的 RWD 左圖右文 -->
-    <div style="display: flex; flex-wrap: wrap; gap: 40px; background: var(--bg-card); padding: 30px; border-radius: 12px; border: 1px solid var(--border-color);">
+    <div class="product-detail-layout">
       
       <!-- 左側：商品大圖 -->
-      <div style="flex: 1; min-width: 300px;">
-        <div style="width: 100%; aspect-ratio: 1/1; background-color: #ffd899; border-radius: 12px;"></div>
+      <div class="product-detail-media">
+        <div class="product-detail-image"></div>
       </div>
       
       <!-- 右側：商品資訊 -->
-      <div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; justify-content: center;">
-        <span style="background: var(--accent); color: white; padding: 4px 8px; border-radius: 4px; font-size: 0.85rem; width: fit-content; margin-bottom: 12px;">人氣熱銷</span>
-        <h1 style="font-size: 2rem; color: var(--text-main); margin-bottom: 16px;">極致微波排骨飯</h1>
-        <p style="color: var(--text-sub); line-height: 1.6; margin-bottom: 24px;">嚴選台灣在地豬肉，搭配獨門滷汁慢火熬煮，肉質軟嫩入味，配上香Q飽滿的越光米，是您午晚餐的最佳選擇。</p>
+      <div class="product-detail-info">
+        <span class="product-badge">人氣熱銷</span>
+        <h1 class="product-name">極致微波排骨飯</h1>
+        <p class="product-desc">嚴選台灣在地豬肉，搭配獨門滷汁慢火熬煮，肉質軟嫩入味，配上香Q飽滿的越光米，是您午晚餐的最佳選擇。</p>
         
-        <div style="font-size: 2.5rem; color: #fe010a; font-weight: bold; margin-bottom: 24px;">$40</div>
+        <div class="product-price">$40</div>
         
-        <div style="display: flex; gap: 16px; margin-bottom: 24px;">
-          <input type="number" value="1" min="1" style="width: 80px; padding: 12px; font-size: 1.2rem; text-align: center; border: 1px solid var(--border-color); border-radius: 6px; background: var(--bg-main); color: var(--text-main);">
-          <button style="flex: 1; background: var(--primary); color: white; border: none; border-radius: 6px; font-size: 1.2rem; font-weight: bold; cursor: pointer;"><span class="material-symbols-outlined shopping-cart">shopping_cart</span> 加入購物車</button>
+        <div class="product-actions">
+          <input type="number" value="1" min="1" class="product-qty-input">
+          <button class="product-add-cart-btn"><span class="material-symbols-outlined shopping-cart">shopping_cart</span> 加入購物車</button>
         </div>
         
-        <p style="font-size: 0.9rem; color: var(--text-sub);">💡 滿 $200 即可享門市取貨免運費。</p>
+        <p class="product-shipping-note">💡 滿 $200 即可享門市取貨免運費。</p>
       </div>
     </div>
   </main>
@@ -106,7 +107,7 @@
         <ul>
           <li><a href="faq.html">常見問題</a></li>
           <li><a href="contact.html">聯絡客服</a></li>
-          <li><a href="#">退換貨政策</a></li>
+          <li><a href="returnpolicy.html">消費者保障</a></li>
         </ul>
       </div>
       <div class="footer-col">

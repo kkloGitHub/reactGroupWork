@@ -12,6 +12,7 @@
   <title>會員中心 | 便利購</title>
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/others.css">
 </head>
 <body>
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
@@ -63,31 +64,31 @@
     </div>
   </header>
 
-  <main class="page-container" style="max-width: 600px;">
+  <main class="page-container page-container-narrow">
     <h1 class="page-title"><span class="material-symbols-outlined member">person</span> 會員中心</h1>
     
     <!-- 數位會員卡 -->
-    <div style="background: linear-gradient(135deg, var(--primary) 0%, #10897d 100%); padding: 30px; border-radius: 16px; color: white; margin-bottom: 24px; box-shadow: 0 8px 20px rgba(21, 183, 166, 0.3);">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-        <span style="font-size: 1.2rem; font-weight: bold;">黃金會員</span>
-        <span style="font-size: 1rem;">王小明 先生</span>
+    <div class="member-card">
+      <div class="member-card-header">
+        <span class="member-level">黃金會員</span>
+        <span class="member-name">王小明 先生</span>
       </div>
       <!-- 模擬條碼區塊 -->
-      <div style="background: white; padding: 16px; border-radius: 8px; text-align: center; color: black;">
-        <div style="height: 60px; background: repeating-linear-gradient(90deg, #000, #000 3px, #fff 3px, #fff 6px, #000 6px, #000 12px, #fff 12px, #fff 15px); margin-bottom: 8px;"></div>
-        <span style="font-family: monospace; font-size: 1.2rem; letter-spacing: 2px;">9876 5432 1098</span>
+      <div class="barcode-box">
+        <div class="barcode-line"></div>
+        <span class="barcode-number">9876 5432 1098</span>
       </div>
     </div>
 
     <!-- 積分與優惠區塊 -->
-    <div style="display: flex; gap: 16px;">
-      <div style="flex: 1; background: var(--bg-card); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
-        <p style="color: var(--text-sub); margin-bottom: 8px;">可用積分</p>
-        <h2 style="color: var(--accent); font-size: 2rem; margin: 0;">1,250 <span style="font-size: 1rem;">點</span></h2>
+    <div class="member-stats">
+      <div class="member-stat-card">
+        <p class="member-stat-label">可用積分</p>
+        <h2 class="member-stat-value member-stat-points">1,250 <span class="member-stat-unit">點</span></h2>
       </div>
-      <div style="flex: 1; background: var(--bg-card); padding: 20px; border-radius: 12px; border: 1px solid var(--border-color); text-align: center;">
-        <p style="color: var(--text-sub); margin-bottom: 8px;">我的優惠券</p>
-        <h2 style="color: var(--primary); font-size: 2rem; margin: 0;">3 <span style="font-size: 1rem;">張</span></h2>
+      <div class="member-stat-card">
+        <p class="member-stat-label">我的優惠券</p>
+        <h2 class="member-stat-value member-stat-coupons">3 <span class="member-stat-unit">張</span></h2>
       </div>
     </div>
   </main>
@@ -108,7 +109,7 @@
         <ul>
           <li><a href="faq.html">常見問題</a></li>
           <li><a href="contact.html">聯絡客服</a></li>
-          <li><a href="#">退換貨政策</a></li>
+          <li><a href="returnpolicy.html">消費者保障</a></li>
         </ul>
       </div>
       <div class="footer-col">

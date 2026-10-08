@@ -1,0 +1,401 @@
+/* ccs/others.css */
+/* 由各頁面行內 style 搬移過來的樣式
+   （購物車 / 聯絡客服 / 會員登入 / 會員中心 / 商品詳情 / 優惠活動 / 零食泡麵） */
+
+/* ==================== 共用樣式 ==================== */
+
+/* 配合 .page-container 使用的容器寬度變化 */
+.page-container.page-container-medium {
+  max-width: 800px;
+}
+
+.page-container.page-container-narrow {
+  max-width: 600px;
+}
+
+/* 表單欄位 (input / select / textarea 共用) */
+.form-control {
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* 表單欄位佔滿容器寬度 */
+.form-control-full {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 表單欄位標題 */
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  font-weight: bold;
+}
+
+/* 表單主要送出按鈕 */
+.form-submit-btn {
+  padding: 12px;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* 表單次要 (外框) 按鈕 */
+.form-secondary-btn {
+  padding: 12px;
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ==================== 購物車 cart.html ==================== */
+.cart-lists {
+  border-top: 2px solid var(--primary);
+  padding-top: 20px;
+}
+
+.cart-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding: 16px 0;
+}
+
+.cart-list-flex {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 商品縮圖佔位 */
+.cart-item-thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+
+.cart-item-thumb-yellow { background-color: #ffd899; }
+.cart-item-thumb-cyan { background-color: #a4f4ec; }
+
+.cart-item-name {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-main);
+}
+
+.cart-item-qty {
+  margin: 4px 0 0;
+  color: var(--text-sub);
+  font-size: 0.9rem;
+}
+
+.cart-item-price {
+  font-weight: bold;
+  color: #fe010a;
+  font-size: 1.2rem;
+}
+
+/* 總計區塊 */
+.cart-summary {
+  text-align: right;
+  margin-top: 30px;
+}
+
+.cart-summary-count {
+  color: var(--text-sub);
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+/* 加掛 .cart-summary 以提高優先權，蓋過 .simple-content-box h2 */
+.cart-summary .cart-summary-total {
+  color: var(--text-main);
+  font-size: 1.5rem;
+}
+
+.cart-total-amount { color: #fe010a; }
+
+.cart-checkout-btn {
+  margin-top: 20px;
+  padding: 12px 32px;
+  background-color: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+/* ==================== 聯絡客服 contact.html ==================== */
+.contact-intro {
+  margin-bottom: 20px;
+  color: var(--text-sub);
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ==================== 會員登入 login.html ==================== */
+.page-container.login-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.login-card {
+  background: var(--bg-card);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.login-title {
+  color: var(--primary);
+  margin-bottom: 24px;
+  font-size: 1.8rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+/* ==================== 會員中心 member.html ==================== */
+/* 數位會員卡 */
+.member-card {
+  background: linear-gradient(135deg, var(--primary) 0%, #10897d 100%);
+  padding: 30px;
+  border-radius: 16px;
+  color: white;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 20px rgba(21, 183, 166, 0.3);
+}
+
+.member-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.member-level {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.member-name { font-size: 1rem; }
+
+/* 模擬條碼區塊 */
+.barcode-box {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  color: black;
+}
+
+.barcode-line {
+  height: 60px;
+  background: repeating-linear-gradient(90deg, #000, #000 3px, #fff 3px, #fff 6px,
+      #000 6px, #000 12px, #fff 12px, #fff 15px);
+  margin-bottom: 8px;
+}
+
+.barcode-number {
+  font-family: monospace;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+
+/* 積分與優惠區塊 */
+.member-stats {
+  display: flex;
+  gap: 16px;
+}
+
+.member-stat-card {
+  flex: 1;
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.member-stat-label {
+  color: var(--text-sub);
+  margin-bottom: 8px;
+}
+
+.member-stat-value {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.member-stat-points { color: var(--accent); }
+.member-stat-coupons { color: var(--primary); }
+
+.member-stat-unit { font-size: 1rem; }
+
+/* ==================== 商品詳情 product-detail.html ==================== */
+/* 以 flex-wrap 達成簡單的 RWD 左圖右文 */
+.product-detail-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: var(--bg-card);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.product-detail-media {
+  flex: 1;
+  min-width: 300px;
+}
+
+.product-detail-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-color: #ffd899;
+  border-radius: 12px;
+}
+
+.product-detail-info {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-badge {
+  background: var(--accent);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.product-name {
+  font-size: 2rem;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.product-desc {
+  color: var(--text-sub);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.product-price {
+  font-size: 2.5rem;
+  color: #fe010a;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.product-actions {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.product-qty-input {
+  width: 80px;
+  padding: 12px;
+  font-size: 1.2rem;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+.product-add-cart-btn {
+  flex: 1;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.product-shipping-note {
+  font-size: 0.9rem;
+  color: var(--text-sub);
+}
+
+/* ==================== 優惠活動 promotions.html ==================== */
+.promo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.promo-card {
+  display: block;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+/* 活動圖佔位 */
+.promo-card-image {
+  width: 100%;
+  height: 200px;
+}
+
+.promo-card-image-primary { background-color: var(--primary); }
+.promo-card-image-accent { background-color: var(--accent); }
+
+.promo-card-body { padding: 20px; }
+
+.promo-card-title {
+  font-size: 1.5rem;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.promo-card-text { color: var(--text-sub); }
+
+/* ==================== 零食泡麵 snacks.html ==================== */
+.card-placeholder-pink { background-color: #ffccce; }
+.card-placeholder-yellow { background-color: #ffd899; }
+.card-placeholder-cyan { background-color: #a4f4ec; }
+

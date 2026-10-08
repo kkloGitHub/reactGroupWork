@@ -12,6 +12,7 @@
   <title>會員登入 | 便利購</title>
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/others.css">
 </head>
 <body>
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
@@ -63,22 +64,22 @@
     </div>
   </header>
 
-  <main class="page-container" style="display: flex; justify-content: center; align-items: center; min-height: 60vh;">
-    <div style="background: var(--bg-card); padding: 40px; border-radius: 12px; border: 1px solid var(--border-color); width: 100%; max-width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
-      <h1 style="color: var(--primary); margin-bottom: 24px; font-size: 1.8rem;">會員登入</h1>
+  <main class="page-container login-page-container">
+    <div class="login-card">
+      <h1 class="login-title">會員登入</h1>
       
-      <form style="display: flex; flex-direction: column; gap: 16px; text-align: left;">
+      <form class="login-form">
         <div>
-          <label style="display: block; margin-bottom: 8px; color: var(--text-main); font-weight: bold;">手機號碼</label>
-          <input type="tel" placeholder="09XX-XXX-XXX" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main); box-sizing: border-box;">
+          <label class="form-label">手機號碼</label>
+          <input type="tel" placeholder="09XX-XXX-XXX" class="form-control form-control-full">
         </div>
         <div>
-          <label style="display: block; margin-bottom: 8px; color: var(--text-main); font-weight: bold;">密碼</label>
-          <input type="password" placeholder="請輸入密碼" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main); box-sizing: border-box;">
+          <label class="form-label">密碼</label>
+          <input type="password" placeholder="請輸入密碼" class="form-control form-control-full">
         </div>
         
-        <button type="button" style="padding: 12px; background-color: var(--primary); color: white; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 10px;">登入</button>
-        <button type="button" style="padding: 12px; background-color: transparent; color: var(--primary); border: 2px solid var(--primary); border-radius: 6px; font-size: 1rem; font-weight: bold; cursor: pointer;">註冊新會員</button>
+        <button type="button" class="form-submit-btn">登入</button>
+        <button type="button" class="form-secondary-btn">註冊新會員</button>
       </form>
     </div>
   </main>
@@ -99,7 +100,7 @@
         <ul>
           <li><a href="faq.html">常見問題</a></li>
           <li><a href="contact.html">聯絡客服</a></li>
-          <li><a href="#">退換貨政策</a></li>
+          <li><a href="returnpolicy.html">消費者保障</a></li>
         </ul>
       </div>
       <div class="footer-col">

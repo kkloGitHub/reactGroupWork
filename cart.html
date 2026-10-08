@@ -12,6 +12,7 @@
   <title>購物車 | 便利購</title>
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/others.css">
 </head>
 <body>
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
@@ -63,57 +64,45 @@
     </div>
   </header>
 
-  <!-- 手機版隱藏選單 -->
-  <nav id="mobile-menu" class="mobile-menu">
-    <ul>
-      <li><a href="fresh-food.html"><span class="material-symbols-outlined">briefcase_meal</span> 鮮食便當</a></li>
-      <li><a href="cafe-drinks.html"><span class="material-symbols-outlined">local_cafe</span> 咖啡飲品</a></li>
-      <li><a href="ecatalog.html"><span class="material-symbols-outlined">menu_book</span> 線上 DM</a></li>
-      <li><a href="lottery.html"><span class="material-symbols-outlined">featured_seasonal_and_gifts</span> 幸運轉盤</a></li>
-      <li><a href="cart.html"><span class="material-symbols-outlined shopping-cart">shopping_cart</span> 購物車</a></li>
-      <li><a href="member.html"><span class="material-symbols-outlined member">person</span> 會員中心</a></li>
-    </ul>
-  </nav>
-
-  <main class="page-container" style="max-width: 800px;">
+  <main class="page-container page-container-medium">
     <div class="simple-content-box">
       <h1 class="page-title"><span class="material-symbols-outlined shopping-cart">shopping_cart</span> 我的購物車</h1>
       
       <!-- 購物清單列表 -->
-      <div style="border-top: 2px solid var(--primary); padding-top: 20px;">
+      <div class="cart-lists">
         
         <!-- 單筆商品 -->
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding: 16px 0;">
-          <div style="display: flex; align-items: center; gap: 16px;">
-            <div style="width: 60px; height: 60px; background-color: #ffd899; border-radius: 8px;"></div>
+        <div class="cart-list">
+          <div class="cart-list-flex">
+            <div class="cart-item-thumb cart-item-thumb-yellow"></div>
             <div>
-              <h3 style="margin: 0; font-size: 1.1rem; color: var(--text-main);">極致微波排骨飯</h3>
-              <p style="margin: 4px 0 0; color: var(--text-sub); font-size: 0.9rem;">數量: 1</p>
+              <h3 class="cart-item-name">極致微波排骨飯</h3>
+              <p class="cart-item-qty">數量: 1</p>
             </div>
           </div>
-          <div style="font-weight: bold; color: #fe010a; font-size: 1.2rem;">$40</div>
+          <div class="cart-item-price">$40</div>
         </div>
 
         <!-- 單筆商品 -->
-        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding: 16px 0;">
-          <div style="display: flex; align-items: center; gap: 16px;">
-            <div style="width: 60px; height: 60px; background-color: #a4f4ec; border-radius: 8px;"></div>
+        <div class="cart-list">
+          <div class="cart-list-flex">
+            <div class="cart-item-thumb cart-item-thumb-cyan"></div>
             <div>
-              <h3 style="margin: 0; font-size: 1.1rem; color: var(--text-main);">特選重烘焙拿鐵 (大)</h3>
-              <p style="margin: 4px 0 0; color: var(--text-sub); font-size: 0.9rem;">數量: 2</p>
+              <h3 class="cart-item-name">特選重烘焙拿鐵 (大)</h3>
+              <p class="cart-item-qty">數量: 2</p>
             </div>
           </div>
-          <div style="font-weight: bold; color: #fe010a; font-size: 1.2rem;">$110</div>
+          <div class="cart-item-price">$110</div>
         </div>
 
       </div>
 
       <!-- 總計區塊 -->
-      <div style="text-align: right; margin-top: 30px;">
-        <p style="color: var(--text-sub); font-size: 1rem; margin-bottom: 8px;">共 3 件商品</p>
-        <h2 style="color: var(--text-main); font-size: 1.5rem;">總金額: <span style="color: #fe010a;">$199</span></h2>
+      <div class="cart-summary">
+        <p class="cart-summary-count">共 3 件商品</p>
+        <h2 class="cart-summary-total">總金額: <span class="cart-total-amount">$199</span></h2>
         
-        <button style="margin-top: 20px; padding: 12px 32px; background-color: var(--accent); color: white; border: none; border-radius: 30px; font-size: 1.1rem; font-weight: bold; cursor: pointer; transition: transform 0.2s;">
+        <button class="cart-checkout-btn">
           前往結帳
         </button>
       </div>
@@ -137,7 +126,7 @@
         <ul>
           <li><a href="faq.html">常見問題</a></li>
           <li><a href="contact.html">聯絡客服</a></li>
-          <li><a href="#">退換貨政策</a></li>
+          <li><a href="returnpolicy.html">消費者保障</a></li>
         </ul>
       </div>
       <div class="footer-col">

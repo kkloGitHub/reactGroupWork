@@ -17,11 +17,17 @@
 
 /* === 文字內容區塊 (About / Terms) === */
 .simple-content-box {
-  background: var(--bg-card);
+  /* background: var(--bg-card);
   padding: 40px;
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  line-height: 1.8;
+  line-height: 1.8; */
+  max-width: 860px;
+  margin: 2rem auto 0;
+  background-color: var(--bg-card);
+  padding: 48px 56px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .simple-content-box h2 {
