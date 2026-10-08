@@ -1,0 +1,132 @@
+.policy-container {
+    max-width: 900px;
+    margin: 2rem auto 0;
+    background-color: var(--bg-card);
+    padding: 50px 60px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    .page-title {
+    color: var(--primary);
+    /* margin-bottom: 0px; */
+    text-align: center;
+    font-size: 2rem;
+    }
+        ul {
+        list-style: none;
+        padding-left: 0;
+        margin: 16px 0 ;
+        }
+
+        ul li {
+            padding: 8px 0 8px 28px;
+            position: relative;
+            font-size: 1rem;
+            color: var(--text-main);
+            border-bottom: 1px solid #f0f4f8;
+        }
+
+        ul li:last-child {
+            border-bottom: none;
+        }
+
+        ul li::before {
+            content: "●";
+            color: var(--text-main);
+            font-size: 0.7rem;
+            position: absolute;
+            left: 8px;
+            top: 12px;
+        }
+        /* 主標題 */
+        h1 {
+            font-size: 2rem;
+            color: var(--text-main);
+            text-align: center;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--primary);
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e8edf3;
+        }
+
+        /* 章節標題 */
+        h2 {
+            font-size: 1.3rem;
+            color: var(--text-main);
+            margin: 36px 0 16px;
+            padding-left: 14px;
+            border-left: 5px solid #2a8a5a;
+            font-weight: 700;
+        }
+        .name {
+            color: var(--primary);
+        }
+
+        /* 段落 */
+        p {
+            margin-bottom: 16px;
+            font-size: 1rem;
+            color: var(--text-main);
+            text-align: justify;
+        }
+        /* 聯繫方式區塊 */
+        .contact-block {
+            background-color: var(--bg-main);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-top: 16px;
+            border: 1px solid #dce8e0;
+        }
+
+        .contact-block p {
+            margin-bottom: 8px;
+        }
+
+        .contact-block p:last-child {
+            margin-bottom: 0;
+        }
+        /* 強調文字 */
+        strong {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* 分隔線 */
+        hr {
+            border: none;
+            border-top: 1px solid #e8edf3;
+            margin: 36px 0;
+        }
+}
+        
+
+        
+
+
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .policy-container {
+                padding: 30px 24px;
+            }
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.15rem;
+                margin: 28px 0 12px;
+            }
+        }

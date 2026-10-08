@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-TW" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>88便利商店網站</title>
+  <!-- 引入 Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+  <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+  
+  <!-- 引入共用與首頁專屬樣式 (依照您的 ccs 資料夾命名) -->
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/privacy.css">
+</head>
+<body>
+
+  <!-- ================= 頂部導覽列 (Navbar) ================= -->
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="./images/LOGO_88.png" alt="88便利店 Logo" class="logo-img">
+        <div class="logo-text">
+          <span class="logo-main">88便利店</span>
+          <span class="logo-sub">88 CONVENIENCE</span>
+        </div>
+      </a>
+
+      <!-- 桌機版主導覽連結 -->
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="fresh-food.html">鮮食便當</a></li>
+          <li><a href="cafe-drinks.html">咖啡飲品</a></li>
+          <li><a href="ecatalog.html">線上 DM</a></li>
+          <li><a href="lottery.html">幸運轉盤</a></li>
+        </ul>
+      </nav>
+
+      <!-- 示意用搜尋框 -->
+      <div class="search-box">
+        <input type="text" placeholder="搜尋鮮食、優惠...">
+        <button class="search-btn"><span class="material-symbols-outlined">search</span></button>
+      </div>
+
+      <!-- 右側功能區 -->
+      <div class="nav-actions">
+        <a href="cart.html" class="icon-link" title="購物車"><span class="material-symbols-outlined shopping-cart">shopping_cart</span></a>
+        <a href="member.html" class="icon-link" title="會員中心"><span class="material-symbols-outlined member">person</span></a>
+        <button id="theme-toggle" class="theme-btn" title="切換明暗模式"><span class="material-symbols-outlined darklight">contrast</span></button>
+        <!-- 漢堡選單按鈕 (手機版顯示) -->
+        <button id="hamburger-btn" class="hamburger-btn"><span class="material-symbols-outlined hanburger-menu">menu</span>
+        </button>
+      </div>
+      <nav id="mobile-menu" class="mobile-menu">
+        <ul>
+          <li><a href="fresh-food.html"><span class="material-symbols-outlined">briefcase_meal</span> 鮮食便當</a></li>
+          <li><a href="cafe-drinks.html"><span class="material-symbols-outlined">local_cafe</span> 咖啡飲品</a></li>
+          <li><a href="ecatalog.html"><span class="material-symbols-outlined">menu_book</span> 線上 DM</a></li>
+          <li><a href="lottery.html"><span class="material-symbols-outlined">featured_seasonal_and_gifts</span> 幸運轉盤</a></li>
+          <li><a href="cart.html"><span class="material-symbols-outlined shopping-cart">shopping_cart</span> 購物車</a></li>
+          <li><a href="member.html"><span class="material-symbols-outlined member">person</span> 會員中心</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 手機版隱藏選單 -->
+
+  <!-- ================= 中間主要版面 (Main Content) ================= -->
+  <main class="page-container">
+    <!-- 主視覺 Banner -->
+    <div class="policy-container">
+
+        <h1 class="page-title">隱私權保護政策</h1>
+        <p class="subtitle">Privacy Policy</p>
+
+
+
+        <p>非常歡迎您光臨「<strong class="name"> CONVENIENCE 網站</strong>」（以下簡稱本網站），為了讓您能夠安心的使用本網站的各項服務與資訊，特此向您說明本網站的隱私權保護政策，以保障您的權益，請您詳閱下列內容：</p>
+
+        <!-- 一 -->
+        <h2>一、隱私權保護政策的適用範圍</h2>
+        <p>隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。</p>
+
+        <!-- 二 -->
+        <h2>二、個人資料的蒐集、處理及利用方式</h2>
+        <p>當您造訪本網站或使用本網站所提供之功能服務時，我們將視該服務功能性質，請您提供必要的個人資料，並在該特定目的範圍內處理及利用您的個人資料；非經您書面同意，本網站不會將個人資料用於其他用途。</p>
+        <p>本網站在您使用服務信箱、問卷調查等互動性功能時，會保留您所提供的姓名、電子郵件地址、聯絡方式及使用時間等。</p>
+        <p>於一般瀏覽時，伺服器會自行記錄相關行徑，包括您使用連線設備的 IP 位址、使用時間、使用的瀏覽器、瀏覽及點選資料記錄等，做為我們增進網站服務的參考依據，此記錄為內部應用，決不對外公佈。</p>
+        <p>為提供精確的服務，我們會將收集的問卷調查內容進行統計與分析，分析結果之統計數據或說明文字呈現，除供內部研究外，我們會視需要公佈統計數據及說明文字，但不涉及特定個人之資料。</p>
+        <p>您可以隨時向我們提出請求，以更正或刪除您的帳戶或本網站所蒐集的個人資料等隱私資訊。聯繫方式請見最下方聯繫管道。</p>
+
+        <!-- 三 -->
+        <h2>三、資料之保護</h2>
+        <p>本網站主機均設有防火牆、防毒系統等相關的各項資訊安全設備及必要的安全防護措施，加以保護網站及您的個人資料採用嚴格的保護措施，只由經過授權的人員才能接觸您的個人資料，相關處理人員皆簽有保密合約，如有違反保密義務者，將會受到相關的法律處分。</p>
+        <p>如因業務需要有必要委託其他單位提供服務時，本網站亦會嚴格要求其遵守保密義務，並且採取必要檢查程序以確定其將確實遵守。</p>
+
+        <!-- 四 -->
+        <h2>四、網站對外的相關連結</h2>
+        <p>本網站的網頁提供其他網站的網路連結，您也可經由本網站所提供的連結，點選進入其他網站。但該連結網站不適用本網站的隱私權保護政策，您必須參考該連結網站中的隱私權保護政策。</p>
+
+        <!-- 五 -->
+        <h2>五、與第三人共用個人資料之政策</h2>
+        <p>本網站絕不會提供、交換、出租或出售任何您的個人資料給其他個人、團體、私人企業或公務機關，但有法律依據或合約義務者，不在此限。</p>
+        <p>前項但書之情形包括不限於：</p>
+        <ul>
+            <li>經由您書面同意。</li>
+            <li>法律明文規定。</li>
+            <li>為免除您生命、身體、自由或財產上之危險。</li>
+            <li>與公務機關或學術研究機構合作，基於公共利益為統計或學術研究而有必要，且資料經過提供者處理或蒐集者依其揭露方式無從識別特定之當事人。</li>
+            <li>當您在網站的行為，違反服務條款或可能損害或妨礙網站與其他使用者權益或導致任何人遭受損害時，經網站管理單位研析揭露您的個人資料是為了辨識、聯絡或採取法律行動所必要者。</li>
+            <li>有利於您的權益。</li>
+            <li>本網站委託廠商協助蒐集、處理或利用您的個人資料時，將對委外廠商或個人善盡監督管理之責。</li>
+        </ul>
+
+        <!-- 六 -->
+        <h2>六、Cookie 之使用</h2>
+        <p>為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的 Cookie，若您不願接受 Cookie 的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕 Cookie 的寫入，但可能會導致網站某些功能無法正常執行。</p>
+
+        <!-- 七 -->
+        <h2>七、隱私權保護政策之修正</h2>
+        <p>本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於網站上。</p>
+
+        <!-- 八 -->
+        <h2>八、聯繫管道</h2>
+        <div class="contact-block">
+            <p>對於本站之隱私權政策有任何疑問，或者想提出變更、移除個人資料之請求，請前往本站「聯絡我們」頁面提交表單。</p>
+            <p>或者 Email 至：<strong>88CONVENIENCE@example.com</strong></p>
+        </div>
+
+
+
+    </div>
+  </main>
+
+  <!-- ================= 頁尾 (Footer) ================= -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>關於我們</h3>
+        <ul>
+          <li><a href="about.html">品牌故事</a></li>
+          <li><a href="stores.html">門市查詢</a></li>
+          <li><a href="join-us.html">人才招募</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>顧客服務</h3>
+        <ul>
+          <li><a href="faq.html">常見問題</a></li>
+          <li><a href="contact.html">聯絡客服</a></li>
+          <li><a href="#">退換貨政策</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>會員權益</h3>
+        <ul>
+          <li><a href="member.html">會員與優惠</a></li>
+          <li><a href="login.html">註冊/登入</a></li>
+          <li><a href="privacy.html">隱私權政策</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 88便利店 版權所有.</p>
+    </div>
+  </footer>
+
+  <!-- 引入 JS (依照您的 js 資料夾架構) -->
+  <script src="./js/main.js"></script>
+</body>
+</html>

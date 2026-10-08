@@ -12,6 +12,7 @@
   <title>門市查詢 | 便利購</title>
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/stores.css">
 </head>
 <body>
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
@@ -64,7 +65,7 @@
   </header>
 
   <main class="page-container">
-    <h1 class="page-title">📍 尋找鄰近門市</h1>
+    <h1 class="page-title"><span class="material-symbols-outlined">map_search</span> 尋找鄰近門市</h1>
     
     <div class="store-search-container">
       
@@ -77,23 +78,24 @@
         
         <div class="store-grid">
           <!-- 門市卡片 -->
-          <div style="padding: 16px; border: 1px solid var(--primary); border-radius: 8px; background: var(--bg-main);">
-            <h3 style="margin: 0 0 8px; color: var(--text-main);">台北信義店</h3>
-            <p style="margin: 0 0 4px; color: var(--text-sub); font-size: 0.9rem;">台北市信義區信義路五段7號</p>
-            <p style="margin: 0; color: var(--primary); font-size: 0.85rem;">24H營業 | 提供ATM</p>
+          <div class="store-card">
+            <h3>觀塘店</h3>
+            <p class="store-address">九龍觀塘開源道71號</p>
+            <p class="store-address-service">24H營業 | 提供ATM</p>
           </div>
           <!-- 門市卡片 2 -->
-          <div style="padding: 16px; border: 1px solid var(--border-color); border-radius: 8px;">
-            <h3 style="margin: 0 0 8px; color: var(--text-main);">中山旗艦店</h3>
-            <p style="margin: 0 0 4px; color: var(--text-sub); font-size: 0.9rem;">台北市中山區南京西路1號</p>
-            <p style="margin: 0; color: var(--primary); font-size: 0.85rem;">24H營業 | 座位區 | 洗手間</p>
+          <div class="store-card">
+            <h3>太古城旗艦店</h3>
+            <p class="store-address">香港島鰂魚涌太古城道18號</p>
+            <p class="store-address-service">24H營業 | 座位區 | 洗手間</p>
           </div>
         </div>
       </div>
       
       <!-- 右側：地圖佔位區 -->
-      <div style="flex: 2; min-width: 300px; background-color: #e5e5e5; display: flex; justify-content: center; align-items: center; min-height: 400px;">
-        <span style="color: #666; font-size: 1.5rem;">[ 互動地圖載入區塊 ]</span>
+      <div class="store-map">
+        <img src="./images/map.jpg" alt="" />
+        <!-- <span>[ 互動地圖載入區塊 ]</span> -->
       </div>
       
     </div>
@@ -107,7 +109,7 @@
         <ul>
           <li><a href="about.html">品牌故事</a></li>
           <li><a href="stores.html">門市查詢</a></li>
-          <li><a href="#">人才招募</a></li>
+          <li><a href="join-us.html">人才招募</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -123,7 +125,7 @@
         <ul>
           <li><a href="member.html">會員與優惠</a></li>
           <li><a href="login.html">註冊/登入</a></li>
-          <li><a href="#">隱私權政策</a></li>
+          <li><a href="privacy.html">隱私權政策</a></li>
         </ul>
       </div>
     </div>

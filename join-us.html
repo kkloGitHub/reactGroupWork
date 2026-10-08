@@ -3,17 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>88便利商店網站</title>
+  <!-- 引入 Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-  <title>聯絡客服 | 便利購</title>
+  
+  <!-- 引入共用與首頁專屬樣式 (依照您的 ccs 資料夾命名) -->
   <link rel="stylesheet" href="./css/global.css">
-  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/joinus.css">
 </head>
 <body>
+
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
   <header class="navbar">
     <div class="nav-container">
@@ -63,25 +68,50 @@
     </div>
   </header>
 
-  <main class="page-container" style="max-width: 600px;">
-    <div class="simple-content-box">
-      <h1 class="page-title">聯絡客服</h1>
-      <p style="margin-bottom: 20px; color: var(--text-sub); text-align: center;">如果您有任何問題或建議，請填寫下方表單，我們將盡快回覆您。</p>
-      
-      <!-- 簡易表單結構 (搭配行內 CSS 以求簡化) -->
-      <form style="display: flex; flex-direction: column; gap: 16px;">
-        <input type="text" placeholder="您的姓名" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main);">
-        <input type="email" placeholder="電子郵件" style="padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main);">
-        <select style="padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main);">
-          <option>請選擇問題類型</option>
-          <option>商品問題</option>
-          <option>門市服務</option>
-          <option>帳號與積分</option>
-        </select>
-        <textarea rows="5" placeholder="請詳細描述您的問題..." style="padding: 12px; border: 1px solid var(--border-color); border-radius: 6px; font-size: 1rem; background: var(--bg-main); color: var(--text-main);"></textarea>
-        
-        <button type="button" style="padding: 12px; background-color: var(--primary); color: white; border: none; border-radius: 6px; font-size: 1.1rem; font-weight: bold; cursor: pointer; margin-top: 10px;">送出訊息</button>
-      </form>
+  <!-- 手機版隱藏選單 -->
+
+  <!-- ================= 中間主要版面 (Main Content) ================= -->
+  <main class="page-container">
+    <!-- 主視覺 Banner -->
+    <div class="joinUs-container">
+      <!-- 為何加入 -->
+      <h1 class="page-title">為何加入 88 便利店</h1>
+      <p>
+        作為全港具規模的連鎖便利店，一直以來為顧客提供零食飲品、滋味熱食，務求透過各種嶄新的產品，滿足顧客不同需要。
+      </p>
+
+      <!-- 關懷員工 -->
+      <h4>關懷員工</h4>
+      <p>
+        「以人為本」是我們的核心價值之一。我們信任及尊重每位員工，同時亦十分重視團隊合作，並鼓勵同事之間持開放和坦誠的態度，在工作上保持緊密的溝通。
+      </p>
+
+      <!-- 優厚薪酬及福利 -->
+      <h4>優厚薪酬及福利</h4>
+      <p>
+        我們會按每位員工的獨特技能及表現作出嘉許。我們的全面薪酬方案極具競爭力，包括：年終雙糧、銷售及服務獎金、夜班及超時工作津貼、交通津貼、特別地區津貼、有薪年假、醫療保障、集團購物優惠、牙科保健計劃、免供款退休計劃等。<br />
+        每個職位的福利或有不同。如有興趣，請聯絡我們的人才招聘部。
+      </p>
+
+      <!-- 培訓與發展 -->
+      <h4>培訓與發展</h4>
+      <p>
+        88 便利店
+        注重團隊成員個人發展，讓團隊成員發揮潛能，盡顯所長。除了獲得全面培訓外，亦有機會讓高潛質的團隊成員借配到其他地方工作，有助擴闊眼界及提升工作技能。
+      </p>
+    <br>
+    <br>
+
+      <hr />
+
+
+      <!-- 如何申請 -->
+      <h3>如何申請？</h3>
+      <div class="apply-section">
+        <p>
+          如果你有興趣申請我們的店舖或物流分發中心職位，歡迎瀏覽本公司網站，各職位的申請方法已列於相關空缺頁面內。
+        </p>
+      </div>
     </div>
   </main>
 
@@ -117,6 +147,8 @@
       <p>&copy; 2026 88便利店 版權所有.</p>
     </div>
   </footer>
+
+  <!-- 引入 JS (依照您的 js 資料夾架構) -->
   <script src="./js/main.js"></script>
 </body>
 </html>
