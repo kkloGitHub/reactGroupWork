@@ -1,0 +1,115 @@
+.ecatalog-description {
+    font-size: 1rem;
+    color: var(--text-sub);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.ecatalog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+/* 1. 隱藏原生的 radio 圓點 */
+.ecatalog-container input[type="radio"] {
+    display: none;
+}
+
+/* 2. 圖片外框維持原設定 */
+.ecatalog-image {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1.63;
+    background-color: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+/* 預設隱藏所有圖片 */
+.ecatalog-image .dm-img {
+    display: none;
+    width: auto;
+    height: 100%;
+    border-radius: 8px;
+    margin: 0 auto;
+}
+
+/* 預設隱藏所有導覽列 */
+.ecatalog-controls .nav-group {
+    display: none;
+    gap: 16px;
+    align-items: center;
+}
+
+/* ====================================================
+   3. 核心切換：當對應的 radio 被 checked 時，顯示該張圖片與導覽
+   ==================================================== */
+#page-1:checked ~ .ecatalog-image .dm-img-1,
+#page-2:checked ~ .ecatalog-image .dm-img-2,
+#page-3:checked ~ .ecatalog-image .dm-img-3,
+#page-4:checked ~ .ecatalog-image .dm-img-4,
+#page-5:checked ~ .ecatalog-image .dm-img-5,
+#page-6:checked ~ .ecatalog-image .dm-img-6,
+#page-7:checked ~ .ecatalog-image .dm-img-7,
+#page-8:checked ~ .ecatalog-image .dm-img-8 {
+    display: block;
+}
+
+#page-1:checked ~ .ecatalog-controls .nav-1,
+#page-2:checked ~ .ecatalog-controls .nav-2,
+#page-3:checked ~ .ecatalog-controls .nav-3,
+#page-4:checked ~ .ecatalog-controls .nav-4,
+#page-5:checked ~ .ecatalog-controls .nav-5,
+#page-6:checked ~ .ecatalog-controls .nav-6,
+#page-7:checked ~ .ecatalog-controls .nav-7,
+#page-8:checked ~ .ecatalog-controls .nav-8 {
+    display: flex;
+}
+
+/* ====================================================
+   4. 將 <label> 美化為按鈕外觀
+   ==================================================== */
+.btn-outline {
+    display: inline-block;
+    width: 140px;
+    padding: 6px 0;
+    border-radius: 30px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    background-color: transparent;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s;
+    user-select: none;
+}
+
+.btn-outline:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 157, 0, 0.4);
+    background-color: var(--primary);
+    color: #fff;
+}
+
+/* 首頁的上一頁 / 末頁的下一頁停用樣式 */
+.btn-outline.disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+    border-color: var(--border-color);
+    color: var(--text-sub);
+}
+
+.ecatalog-page-info {
+    font-weight: bold;
+    color: var(--text-main);
+    min-width: 60px;
+    text-align: center;
+}

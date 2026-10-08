@@ -12,6 +12,7 @@
   <title>線上 DM | 便利購</title>
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/ecatalog.css">
 </head>
 <body>
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
@@ -65,20 +66,91 @@
 
   <main class="page-container">
     <h1 class="page-title"><span class="material-symbols-outlined">menu_book</span> 本期線上 DM 特刊</h1>
-    <p style="text-align: center; color: var(--text-sub); margin-bottom: 30px;">活動期間：即日起至 11/31，眾多商品第二件 6 折起！</p>
+    <p class="ecatalog-description">活動期間：即日起至 11/31，眾多商品第二件 6 折起！</p>
     
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 24px;">
+    <div class="ecatalog-container">
       
-      <!-- 模擬一張大張的 DM 圖片 -->
-      <div style="width: 100%; max-width: 800px; aspect-ratio: 1 / 1.4; background-color: var(--bg-card); border: 2px solid var(--border-color); border-radius: 8px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-        <p style="color: var(--primary); font-size: 1.5rem; font-weight: bold;">[此處替換為您的 DM 圖片]</p>
+      <!-- 1. 八個隱藏的 radio 單選框 (負責記錄目前翻到第幾頁) -->
+      <input type="radio" name="dm-page" id="page-1" checked>
+      <input type="radio" name="dm-page" id="page-2">
+      <input type="radio" name="dm-page" id="page-3">
+      <input type="radio" name="dm-page" id="page-4">
+      <input type="radio" name="dm-page" id="page-5">
+      <input type="radio" name="dm-page" id="page-6">
+      <input type="radio" name="dm-page" id="page-7">
+      <input type="radio" name="dm-page" id="page-8">
+
+      <!-- 2. DM 圖片展示區 (放滿 8 張圖片) -->
+      <div class="ecatalog-image">
+        <img src="./images/DM_01.jpg" alt="線上 DM 第 1 頁" class="dm-img dm-img-1">
+        <img src="./images/DM_02.jpg" alt="線上 DM 第 2 頁" class="dm-img dm-img-2">
+        <img src="./images/DM_03.jpg" alt="線上 DM 第 3 頁" class="dm-img dm-img-3">
+        <img src="./images/DM_04.jpg" alt="線上 DM 第 4 頁" class="dm-img dm-img-4">
+        <img src="./images/DM_05.jpg" alt="線上 DM 第 5 頁" class="dm-img dm-img-5">
+        <img src="./images/DM_06.jpg" alt="線上 DM 第 6 頁" class="dm-img dm-img-6">
+        <img src="./images/DM_07.jpg" alt="線上 DM 第 7 頁" class="dm-img dm-img-7">
+        <img src="./images/DM_08.jpg" alt="線上 DM 第 8 頁" class="dm-img dm-img-8">
       </div>
 
-      <!-- 翻頁按鈕 -->
-      <div style="display: flex; gap: 16px;">
-        <button class="btn-outline" style="width: 120px;">◀ 上一頁</button>
-        <span style="display: flex; align-items: center; font-weight: bold; color: var(--text-main);">1 / 8</span>
-        <button class="btn-outline" style="width: 120px;">下一頁 ▶</button>
+      <!-- 3. 控制按鈕組 (每頁對應一組上一頁/下一頁標籤) -->
+      <div class="ecatalog-controls">
+        
+        <!-- 第 1 頁導覽 (上一頁停用，下一頁連到 page-2) -->
+        <div class="nav-group nav-1">
+          <span class="btn-outline disabled">◀ 上一頁</span>
+          <p class="ecatalog-page-info">1 / 8</p>
+          <label for="page-2" class="btn-outline">下一頁 ▶</label>
+        </div>
+
+        <!-- 第 2 頁導覽 -->
+        <div class="nav-group nav-2">
+          <label for="page-1" class="btn-outline">◀ 上一頁</label>
+          <p class="ecatalog-page-info">2 / 8</p>
+          <label for="page-3" class="btn-outline">下一頁 ▶</label>
+        </div>
+
+        <!-- 第 3 頁導覽 -->
+        <div class="nav-group nav-3">
+          <label for="page-2" class="btn-outline">◀ 上一頁</label>
+          <p class="ecatalog-page-info">3 / 8</p>
+          <label for="page-4" class="btn-outline">下一頁 ▶</label>
+        </div>
+
+        <!-- 第 4 頁導覽 -->
+        <div class="nav-group nav-4">
+          <label for="page-3" class="btn-outline">◀ 上一頁</label>
+          <p class="ecatalog-page-info">4 / 8</p>
+          <label for="page-5" class="btn-outline">下一頁 ▶</label>
+        </div>
+
+        <!-- 第 5 頁導覽 -->
+        <div class="nav-group nav-5">
+          <label for="page-4" class="btn-outline">◀ 上一頁</label>
+          <p class="ecatalog-page-info">5 / 8</p>
+          <label for="page-6" class="btn-outline">下一頁 ▶</label>
+        </div>
+
+        <!-- 第 6 頁導覽 -->
+        <div class="nav-group nav-6">
+          <label for="page-5" class="btn-outline">◀ 上一頁</label>
+          <p class="ecatalog-page-info">6 / 8</p>
+          <label for="page-7" class="btn-outline">下一頁 ▶</label>
+        </div>
+
+        <!-- 第 7 頁導覽 -->
+        <div class="nav-group nav-7">
+          <label for="page-6" class="btn-outline">◀ 上一頁</label>
+          <p class="ecatalog-page-info">7 / 8</p>
+          <label for="page-8" class="btn-outline">下一頁 ▶</label>
+        </div>
+
+        <!-- 第 8 頁導覽 (下一頁停用) -->
+        <div class="nav-group nav-8">
+          <label for="page-7" class="btn-outline">◀ 上一頁</label>
+          <p class="ecatalog-page-info">8 / 8</p>
+          <span class="btn-outline disabled">下一頁 ▶</span>
+        </div>
+
       </div>
       
     </div>
@@ -106,7 +178,7 @@
       <div class="footer-col">
         <h3>會員權益</h3>
         <ul>
-          <li><a href="member.html">點數說明</a></li>
+          <li><a href="member.html">會員與優惠</a></li>
           <li><a href="login.html">註冊/登入</a></li>
           <li><a href="#">隱私權政策</a></li>
         </ul>
