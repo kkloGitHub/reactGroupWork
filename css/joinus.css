@@ -13,7 +13,8 @@
         border-radius: 12px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         .page-title {
-            color: var(--primary);
+            /* 對比：原 --primary (#15b7a6) 對白底僅 2.5:1，改用 --primary-ink (約 8:1) */
+            color: var(--primary-ink);
             margin-bottom: 30px;
             text-align: center;
             font-size: 2rem;

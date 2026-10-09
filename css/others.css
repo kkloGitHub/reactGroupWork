@@ -41,7 +41,8 @@
 .form-submit-btn {
   padding: 12px;
   background-color: var(--primary);
-  color: white;
+  /* 白字在 #15b7a6 上只有 2.5:1，改用深色文字（約 6.8:1） */
+  color: var(--on-primary);
   border: none;
   border-radius: 6px;
   font-size: 1.1rem;
@@ -54,8 +55,8 @@
 .form-secondary-btn {
   padding: 12px;
   background-color: transparent;
-  color: var(--primary);
-  border: 2px solid var(--primary);
+  color: var(--primary-ink);
+  border: 2px solid var(--primary-ink);
   border-radius: 6px;
   font-size: 1rem;
   font-weight: bold;
@@ -106,7 +107,8 @@
 
 .cart-item-price {
   font-weight: bold;
-  color: #fe010a;
+  /* 原 #fe010a 對白底約 4.0:1（僅大字合格）；改用 #c40008 約 6.3:1，任何字級皆合格 */
+  color: #c40008;
   font-size: 1.2rem;
 }
 
@@ -128,13 +130,14 @@
   font-size: 1.5rem;
 }
 
-.cart-total-amount { color: #fe010a; }
+.cart-total-amount { color: #c40008; /* 同 .cart-item-price：提高對比至約 6.3:1 */ }
 
 .cart-checkout-btn {
   margin-top: 20px;
   padding: 12px 32px;
   background-color: var(--accent);
-  color: white;
+  /* 白字在 #ff9d00 上只有 1.9:1，改用深色文字（約 12:1） */
+  color: var(--on-accent);
   border: none;
   border-radius: 30px;
   font-size: 1.1rem;
@@ -176,7 +179,7 @@
 }
 
 .login-title {
-  color: var(--primary);
+  color: var(--primary-ink);
   margin-bottom: 24px;
   font-size: 1.8rem;
 }
@@ -188,15 +191,21 @@
   text-align: left;
 }
 
+/* 行動裝置：縮小卡片內距，讓欄位有足夠寬度可輸入 */
+@media (max-width: 480px) {
+  .login-card { padding: 24px 18px; }
+}
+
 /* ==================== 會員中心 member.html ==================== */
 /* 數位會員卡 */
 .member-card {
-  background: linear-gradient(135deg, var(--primary) 0%, #10897d 100%);
+  /* 原本白字在 #15b7a6 漸層上只有 2.5:1；改用深主色漸層後約 8:1，仍保留湖水綠意象 */
+  background: linear-gradient(135deg, var(--color-light-sea-green-950) 0%, var(--color-light-sea-green-800) 100%);
   padding: 30px;
   border-radius: 16px;
-  color: white;
+  color: #ffffff;
   margin-bottom: 24px;
-  box-shadow: 0 8px 20px rgba(21, 183, 166, 0.3);
+  box-shadow: 0 8px 20px rgba(4, 32, 29, 0.25);
 }
 
 .member-card-header {
@@ -260,8 +269,8 @@
   margin: 0;
 }
 
-.member-stat-points { color: var(--accent); }
-.member-stat-coupons { color: var(--primary); }
+.member-stat-points { color: var(--accent-ink); /* 原 --accent 對白底僅 1.9:1 */ }
+.member-stat-coupons { color: var(--primary-ink); /* 原 --primary 對白底僅 2.5:1 */ }
 
 .member-stat-unit { font-size: 1rem; }
 
@@ -279,7 +288,8 @@
 
 .product-detail-media {
   flex: 1;
-  min-width: 300px;
+  /* min() 讓 300px 的最小寬度在小於 300px 的視窗不會造成水平捲動 */
+  min-width: min(300px, 100%);
 }
 
 .product-detail-image {
@@ -302,7 +312,8 @@
 
 .product-detail-info {
   flex: 1;
-  min-width: 300px;
+  /* min() 讓 300px 的最小寬度在小於 300px 的視窗不會造成水平捲動 */
+  min-width: min(300px, 100%);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -310,7 +321,8 @@
 
 .product-badge {
   background: var(--accent);
-  color: white;
+  /* 白字在 #ff9d00 上只有 1.9:1，改用深色文字（約 12:1） */
+  color: var(--on-accent);
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 0.85rem;
@@ -332,7 +344,8 @@
 
 .product-price {
   font-size: 2.5rem;
-  color: #fe010a;
+  /* 原 #fe010a 約 4.0:1；改用 #c40008 約 6.3:1 */
+  color: #c40008;
   font-weight: bold;
   margin-bottom: 24px;
 }
@@ -357,7 +370,8 @@
 .product-add-cart-btn {
   flex: 1;
   background: var(--primary);
-  color: white;
+  /* 白字在 #15b7a6 上只有 2.5:1，改用深色文字（約 6.8:1） */
+  color: var(--on-primary);
   border: none;
   border-radius: 6px;
   font-size: 1.2rem;

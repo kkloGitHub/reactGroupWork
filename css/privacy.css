@@ -6,7 +6,8 @@
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     .page-title {
-    color: var(--primary);
+    /* 對比：原 --primary (#15b7a6) 對白底僅 2.5:1，改用 --primary-ink (約 8:1) */
+    color: var(--primary-ink);
     /* margin-bottom: 0px; */
     text-align: center;
     font-size: 2rem;
@@ -32,10 +33,10 @@
         ul li::before {
             content: "●";
             color: var(--text-main);
-            font-size: 0.7rem;
+            font-size: 0.4rem;
             position: absolute;
             left: 8px;
-            top: 12px;
+            top: 18px;
         }
         /* 主標題 */
         h1 {
@@ -49,7 +50,7 @@
 
         .subtitle {
             text-align: center;
-            color: var(--primary);
+            color: var(--primary-ink);
             font-size: 0.95rem;
             margin-bottom: 40px;
             padding-bottom: 20px;
@@ -66,7 +67,7 @@
             font-weight: 700;
         }
         .name {
-            color: var(--primary);
+            color: var(--primary-ink);
         }
 
         /* 段落 */
@@ -94,7 +95,8 @@
         }
         /* 強調文字 */
         strong {
-            color: var(--accent);
+            /* 對比：原 --accent (#ff9d00) 對白底僅 1.9:1，改用 --accent-ink (約 5.3:1) */
+            color: var(--accent-ink);
             font-weight: 600;
         }
 

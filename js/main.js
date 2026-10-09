@@ -66,12 +66,22 @@ document.addEventListener('DOMContentLoaded', () => {
     htmlElement.setAttribute('data-theme', savedTheme);
   }
 
+  // 無障礙：讓輔助科技知道目前是「深色模式 / 明亮模式」（配合 HTML 的 aria-pressed）
+  const syncThemeState = () => {
+    if (!themeToggleBtn) return;
+    const isDark = htmlElement.getAttribute('data-theme') === 'dark';
+    themeToggleBtn.setAttribute('aria-pressed', String(isDark));
+    themeToggleBtn.setAttribute('title', isDark ? '切換為明亮模式' : '切換為深色模式');
+  };
+  syncThemeState();
+
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', () => {
       const currentTheme = htmlElement.getAttribute('data-theme');
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       htmlElement.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
+      syncThemeState();
     });
   }
 });

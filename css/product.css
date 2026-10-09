@@ -9,7 +9,7 @@
 }
 
 .page-title {
-  color: var(--primary);
+  color: var(--primary-ink);
   margin-bottom: 30px;
   text-align: center;
   font-size: 2rem;
@@ -28,6 +28,14 @@
   padding: 48px 56px;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  /* 可讀性：中文段落加大行高，長文閱讀更輕鬆 */
+  line-height: 1.9;
+}
+
+/* 可讀性：行動裝置縮小內距與標題，避免一行只剩 3~4 個字 */
+@media (max-width: 768px) {
+  .simple-content-box { padding: 28px 20px; }
+  .page-title { font-size: 1.6rem; }
 }
 
 .simple-content-box h2 {
@@ -44,7 +52,7 @@
   flex-direction: column;
   gap: 16px;
   h3 {
-    color: var(--primary);
+    color: var(--primary-ink);
   }
 }
 .faq-list.list-02, .faq-list.list-03 {
@@ -62,7 +70,7 @@
   font-weight: 700;
   cursor: pointer;
   background-color: var(--bg-card);
-  color: var(--primary);
+  color: var(--primary-ink);
   list-style: none; /* 隱藏預設箭頭 */
   position: relative;
 }
@@ -87,7 +95,8 @@
 /* === 簡單商品列表 Grid === */
 .simple-product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* 使用 min(250px, 100%) 避免極窄螢幕（< 300px）被 250px 撐出水平捲軸 */
+  grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr));
   gap: 24px;
 }
 
@@ -119,7 +128,8 @@
 }
 
 .simple-card .price {
-  color: #fe010a;
+  /* 原 #fe010a 對白底約 4.0:1（僅大字合格）；改用 #c40008 約 6.3:1 */
+  color: #c40008;
   font-weight: 700;
   font-size: 1.2rem;
   margin-bottom: 16px;
@@ -129,8 +139,9 @@
   width: 100%;
   padding: 10px;
   background: transparent;
-  border: 2px solid var(--primary);
-  color: var(--primary);
+  /* 邊框與文字改用對比足夠的主色（原 #15b7a6 對白底只有 2.5:1） */
+  border: 2px solid var(--primary-ink);
+  color: var(--primary-ink);
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
@@ -139,5 +150,5 @@
 
 .btn-outline:hover {
   background: var(--primary);
-  color: #fff;
+  color: var(--on-primary);
 }

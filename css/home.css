@@ -2,22 +2,25 @@
 
 /* === Hero Banner主視覺 === */
 .hero-banner {
-  background-color: var(--primary);
-  background-image: linear-gradient(135deg, var(--primary) 0%, #10897d 100%);
+  /* 背景圖載入前的底色：深湖水綠，確保白色標題即使沒有背景圖仍有 >12:1 對比 */
+  background-color: var(--color-light-sea-green-950);
   color: #ffffff;
   padding: 80px 20px;
   text-align: center;
-  background: linear-gradient(135deg, #10897d1e 0%, #10897d89 100%), url(../images/Firefly_Coffee_View.jpg) top/cover no-repeat;
+  /* 可讀性：原遮罩只有 12%~54% 不透明度，白色文字壓在照片亮部時對比僅約 2:1；
+     加深為 78%~72%，確保標題與說明文字清楚可讀 */
+  background: linear-gradient(135deg, rgba(4, 32, 29, 0.78) 0%, rgba(11, 91, 83, 0.72) 100%), url(../images/Firefly_Coffee_View.jpg) top/cover no-repeat;
 }
 .hero-content { 
     max-width: 600px; 
     margin: 0 auto; }
-.hero-content h1 { font-size: 2.1rem; margin-bottom: 16px; }
-.hero-content p { font-size: 1.1rem; margin-bottom: 24px; line-height: 1.5; }
+.hero-content h1 { font-size: 2.1rem; margin-bottom: 16px; text-shadow: 0 2px 10px rgba(4, 32, 29, 0.9); }
+.hero-content p { font-size: 1.1rem; margin-bottom: 24px; line-height: 1.5; text-shadow: 0 2px 10px rgba(4, 32, 29, 0.9); }
 .btn-primary {
   display: inline-block;
   background-color: var(--accent);
-  color: #fff;
+  /* 原本白字在 #ff9d00 上對比只有 2.1:1；改用深色文字後約 12:1 */
+  color: var(--on-accent);
   padding: 12px 24px;
   border-radius: 30px;
   font-weight: bold;
@@ -49,7 +52,7 @@
     font-size: 1.8rem;
     transform: translateY(8px);
     margin-bottom: 12px;
-    color: var(--primary);
+    color: var(--primary-ink);
   }
 }
 .category-card:hover { transform: translateY(-5px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
@@ -100,4 +103,4 @@
 .scroll-card:hover { transform: translateY(-5px); }
 .card-img { width: 100%; height: 140px; border-radius: 8px; margin-bottom: 12px; /* object-fit: cover; */ }
 .scroll-card h3 { font-size: 1.1rem; margin-bottom: 8px; color: var(--text-main); }
-.scroll-card .price { color: #fe010a; font-weight: 700; font-size: 1.2rem; }
+.scroll-card .price { color: #c40008; font-weight: 700; font-size: 1.2rem; }

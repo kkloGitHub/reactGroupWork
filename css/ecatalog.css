@@ -12,9 +12,14 @@
     gap: 24px;
 }
 
-/* 1. 隱藏原生的 radio 圓點 */
+/* 1. 隱藏原生的 radio 圓點：視覺上隱藏但仍保留鍵盤焦點與螢幕閱讀器可存取性
+   （原本 display: none 會讓線上 DM 完全無法用鍵盤操作） */
 .ecatalog-container input[type="radio"] {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
 }
 
 /* 2. 圖片外框維持原設定 */
@@ -73,6 +78,20 @@
     display: flex;
 }
 
+/* 鍵盤焦點落在 radio 上時，讓對應的翻頁按鈕出現明顯外框（可及性） */
+#page-1:focus-visible ~ .ecatalog-controls .nav-1,
+#page-2:focus-visible ~ .ecatalog-controls .nav-2,
+#page-3:focus-visible ~ .ecatalog-controls .nav-3,
+#page-4:focus-visible ~ .ecatalog-controls .nav-4,
+#page-5:focus-visible ~ .ecatalog-controls .nav-5,
+#page-6:focus-visible ~ .ecatalog-controls .nav-6,
+#page-7:focus-visible ~ .ecatalog-controls .nav-7,
+#page-8:focus-visible ~ .ecatalog-controls .nav-8 {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 4px;
+    border-radius: 30px;
+}
+
 /* ====================================================
    4. 將 <label> 美化為按鈕外觀
    ==================================================== */
@@ -84,8 +103,8 @@
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    border: 2px solid var(--primary-ink);
+    color: var(--primary-ink);
     background-color: transparent;
     transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s;
     user-select: none;
@@ -95,7 +114,7 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 157, 0, 0.4);
     background-color: var(--primary);
-    color: #fff;
+    color: var(--on-primary);
 }
 
 /* 首頁的上一頁 / 末頁的下一頁停用樣式 */
@@ -112,4 +131,12 @@
     color: var(--text-main);
     min-width: 60px;
     text-align: center;
+}
+
+/* 行動版：控制列按鈕自動縮小，避免 140px x2 + 頁碼跑出畫面外（原本會水平溢出） */
+@media (max-width: 480px) {
+    .ecatalog-controls { width: 100%; }
+    .ecatalog-controls .nav-group { width: 100%; justify-content: center; }
+    .ecatalog-controls .btn-outline { width: auto; flex: 1 1 0; min-width: 0; padding: 6px 4px; }
+    .ecatalog-page-info { min-width: 44px; }
 }

@@ -11,8 +11,10 @@
 /* 新增外層定位框 */
 .lottery-box {
   position: relative;
-  width: 300px;
-  height: 300px;
+  /* 原本固定 300px，在 320px 寬手機（扣掉內距只剩 280px）會產生水平捲軸 */
+  width: min(300px, 100%);
+  aspect-ratio: 1 / 1;
+  height: auto;
   margin: 0 auto;
 }
 
@@ -49,7 +51,8 @@
   width: 80px;
   height: 80px;
   background: var(--accent);
-  color: white;
+  /* 白字在 #ff9d00 上只有 2.1:1，改用深色文字（約 12:1） */
+  color: var(--on-accent);
   border: 4px solid white;
   border-radius: 50%;
   font-size: 1.2rem;
@@ -60,6 +63,11 @@
 }
 .lottery-wheel .lottery-button:hover {
   background: var(--primary);
+}
+/* aria-disabled 期間仍保留焦點（不影響鍵盤操作），僅以游標與透明度提示不可再點 */
+.lottery-wheel .lottery-button[aria-disabled="true"] {
+  cursor: progress;
+  opacity: 0.85;
 }
 .lottery-results {
   margin-top: 40px;

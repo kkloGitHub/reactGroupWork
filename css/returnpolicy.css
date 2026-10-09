@@ -7,7 +7,8 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
             /* 主標題 */
             .page-title {
-                color: var(--primary);
+                /* 對比：原 --primary (#15b7a6) 對白底僅 2.5:1，改用 --primary-ink (約 8:1) */
+                color: var(--primary-ink);
                 margin-bottom: 30px;
                 text-align: center;
                 font-size: 2rem;
@@ -15,7 +16,7 @@
             h1 {
                 font-size: 1.9rem;
                 padding-bottom: 30px;
-                border-bottom: 2px solid var(--primary);
+                border-bottom: 2px solid var(--primary-ink);
                 font-weight: 700;
                 letter-spacing: 1px;
             }
@@ -41,17 +42,17 @@
     
             ul > li::before {
                 content: "●";
-                color: var(--primary);
-                font-size: 0.75rem;
+                color: var(--primary-ink);
+                font-size: 0.4rem;
                 position: absolute;
                 left: 8px;
-                top: 14px;
+                top: 20px;
             }
     
             /* 星號備註段落 */
             .asterisk-note {
                 background-color: var(--bg-card);
-                border-left: 5px solid var(--primary);
+                border-left: 5px solid var(--primary-ink);
                 border-radius: 6px;
                 padding: 20px 24px;
                 margin: 30px 0 24px;
@@ -62,7 +63,7 @@
             .asterisk-note p {
                 margin-bottom: 8px;
                 font-weight: 600;
-                color: var(--primary);
+                color: var(--primary-ink);
             }
     
             .asterisk-note p:last-child {
@@ -78,7 +79,8 @@
         .version {
             text-align: right;
             font-size: 0.95rem;
-            color: #888;
+            /* 對比：原 #888 對白底僅 3.5:1，改用次要文字色 --text-sub (約 5.6:1) */
+            color: var(--text-sub);
             margin-top: 36px;
             padding-top: 18px;
             border-top: 1px solid #e8edf3;

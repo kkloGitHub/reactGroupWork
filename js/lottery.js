@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. 防止轉動中重複觸發
     if (isSpinning) return;
     isSpinning = true;
-    spinBtn.disabled = true;
+    // 無障礙：改用 aria-disabled（原本的 disabled 會讓鍵盤焦點在轉動期間被強制移除）
+    spinBtn.setAttribute('aria-disabled', 'true');
     resultText.textContent = '轉盤飛速旋轉中... 祝您中大獎！';
 
     // 2. 隨機選出一個獎項
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 5. 等待 4 秒動畫結束後公佈結果並重置按鈕
     setTimeout(() => {
       isSpinning = false;
-      spinBtn.disabled = false;
+      spinBtn.setAttribute('aria-disabled', 'false');
       resultText.textContent = selectedPrize.message;
     }, 4000);
   });

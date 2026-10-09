@@ -13,8 +13,10 @@
   <link rel="stylesheet" href="./css/global.css">
   <link rel="stylesheet" href="./css/product.css">
   <link rel="stylesheet" href="./css/others.css">
+  <script src="./js/theme-init.js"></script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
   <header class="navbar">
     <div class="nav-container">
@@ -27,7 +29,7 @@
       </a>
 
       <!-- 桌機版主導覽連結 -->
-      <nav class="desktop-nav">
+      <nav class="desktop-nav" aria-label="主選單">
         <ul>
           <li><a href="fresh-food.html">鮮食便當</a></li>
           <li><a href="cafe-drinks.html">咖啡飲品</a></li>
@@ -37,40 +39,40 @@
       </nav>
 
       <!-- 示意用搜尋框 -->
-      <div class="search-box">
-        <input type="text" placeholder="搜尋鮮食、優惠...">
-        <button class="search-btn"><span class="material-symbols-outlined">search</span></button>
+      <div class="search-box" role="search">
+        <input type="text" placeholder="搜尋鮮食、優惠..." aria-label="站內搜尋">
+        <button type="button" class="search-btn" aria-label="搜尋"><span aria-hidden="true" class="material-symbols-outlined">search</span></button>
       </div>
 
       <!-- 右側功能區 -->
       <div class="nav-actions">
-        <a href="cart.html" class="icon-link" title="購物車"><span class="material-symbols-outlined shopping-cart">shopping_cart</span></a>
-        <a href="member.html" class="icon-link" title="會員中心"><span class="material-symbols-outlined member">person</span></a>
-        <button id="theme-toggle" class="theme-btn" title="切換明暗模式"><span class="material-symbols-outlined darklight">contrast</span></button>
+        <a href="cart.html" class="icon-link" title="購物車" aria-label="購物車"><span aria-hidden="true" class="material-symbols-outlined shopping-cart">shopping_cart</span></a>
+        <a href="member.html" class="icon-link" title="會員中心" aria-label="會員中心"><span aria-hidden="true" class="material-symbols-outlined member">person</span></a>
+        <button type="button" id="theme-toggle" class="theme-btn" title="切換明暗模式" aria-label="切換明暗模式" aria-pressed="false"><span aria-hidden="true" class="material-symbols-outlined darklight">contrast</span></button>
         <!-- 漢堡選單按鈕 (手機版顯示) -->
-        <button id="hamburger-btn" class="hamburger-btn"><span class="material-symbols-outlined hanburger-menu">menu</span>
+        <button type="button" id="hamburger-btn" class="hamburger-btn" aria-label="開啟或關閉選單" aria-controls="mobile-menu" aria-expanded="false"><span aria-hidden="true" class="material-symbols-outlined hanburger-menu">menu</span>
         </button>
       </div>
-      <nav id="mobile-menu" class="mobile-menu">
+      <nav id="mobile-menu" class="mobile-menu" aria-label="行動版主選單">
         <ul>
-          <li><a href="fresh-food.html"><span class="material-symbols-outlined">briefcase_meal</span> 鮮食便當</a></li>
-          <li><a href="cafe-drinks.html"><span class="material-symbols-outlined">local_cafe</span> 咖啡飲品</a></li>
-          <li><a href="ecatalog.html"><span class="material-symbols-outlined">menu_book</span> 線上 DM</a></li>
-          <li><a href="lottery.html"><span class="material-symbols-outlined">featured_seasonal_and_gifts</span> 幸運轉盤</a></li>
-          <li><a href="cart.html"><span class="material-symbols-outlined shopping-cart">shopping_cart</span> 購物車</a></li>
-          <li><a href="member.html"><span class="material-symbols-outlined member">person</span> 會員中心</a></li>
+          <li><a href="fresh-food.html"><span aria-hidden="true" class="material-symbols-outlined">briefcase_meal</span> 鮮食便當</a></li>
+          <li><a href="cafe-drinks.html"><span aria-hidden="true" class="material-symbols-outlined">local_cafe</span> 咖啡飲品</a></li>
+          <li><a href="ecatalog.html"><span aria-hidden="true" class="material-symbols-outlined">menu_book</span> 線上 DM</a></li>
+          <li><a href="lottery.html"><span aria-hidden="true" class="material-symbols-outlined">featured_seasonal_and_gifts</span> 幸運轉盤</a></li>
+          <li><a href="cart.html"><span aria-hidden="true" class="material-symbols-outlined shopping-cart">shopping_cart</span> 購物車</a></li>
+          <li><a href="member.html"><span aria-hidden="true" class="material-symbols-outlined member">person</span> 會員中心</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="page-container">
+  <main id="main-content" class="page-container">
     <!-- 使用 flex-wrap 達成簡單的 RWD 左圖右文 -->
     <div class="product-detail-layout">
       
       <!-- 左側：商品大圖 -->
       <div class="product-detail-media">
-        <div class="product-detail-image"><img src="./images/Firefly_Ice Cream_2.jpg" alt="" /></div>
+        <div class="product-detail-image"><img loading="lazy" decoding="async" src="./images/Firefly_Ice Cream_2.jpg" alt="北海道十勝限定冰淇淋" /></div>
       </div>
       
       <!-- 右側：商品資訊 -->
@@ -82,8 +84,8 @@
         <div class="product-price">$28</div>
         
         <div class="product-actions">
-          <input type="number" value="1" min="1" class="product-qty-input">
-          <button class="product-add-cart-btn"><span class="material-symbols-outlined shopping-cart">shopping_cart</span> 加入購物車</button>
+          <input type="number" value="1" min="1" class="product-qty-input" aria-label="購買數量">
+          <button class="product-add-cart-btn"><span aria-hidden="true" class="material-symbols-outlined shopping-cart">shopping_cart</span> 加入購物車</button>
         </div>
         
         <p class="product-shipping-note">💡 滿 $200 即可享門市取貨免運費。</p>
