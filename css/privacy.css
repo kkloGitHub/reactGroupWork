@@ -84,15 +84,15 @@
             padding: 20px 24px;
             margin-top: 16px;
             border: 1px solid #dce8e0;
-            word-break: break-all;
         }
-
+        
         .contact-block p {
             margin-bottom: 8px;
         }
-
+        
         .contact-block p:last-child {
             margin-bottom: 0;
+            word-break: break-all;
         }
         /* 強調文字 */
         strong {
