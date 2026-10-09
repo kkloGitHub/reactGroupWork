@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>88便利商店網站</title>
-  <!-- 引入 Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   
   <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
-  
-  <!-- 引入共用與首頁專屬樣式 (依照您的 ccs 資料夾命名) -->
+  <title>商品詳情 | 便利購</title>
   <link rel="stylesheet" href="./css/global.css">
-  <link rel="stylesheet" href="./css/home.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="stylesheet" href="./css/others.css">
 </head>
 <body>
-
   <!-- ================= 頂部導覽列 (Navbar) ================= -->
   <header class="navbar">
     <div class="nav-container">
@@ -67,88 +64,31 @@
     </div>
   </header>
 
-  <!-- 手機版隱藏選單 -->
-
-  <!-- ================= 中間主要版面 (Main Content) ================= -->
-  <main>
-    <!-- 主視覺 Banner -->
-    <section class="hero-banner">
-      <div class="hero-content">
-        <h1>秋季限定！栗子風味拿鐵新上市</h1>
-        <p>即日起至 11/31，88 CAFE 全品項第二杯半價，立即選購您的專屬風味。</p>
-        <a href="cafe-drinks.html" class="btn-primary">立即查看</a>
+  <main class="page-container">
+    <!-- 使用 flex-wrap 達成簡單的 RWD 左圖右文 -->
+    <div class="product-detail-layout">
+      
+      <!-- 左側：商品大圖 -->
+      <div class="product-detail-media">
+        <div class="product-detail-image"><img src="./images/Firefly_Beef_Brisket_Rice_2.jpg" alt="" /></div>
       </div>
-    </section>
-
-    <!-- 快速分類入口 (Grid) -->
-    <section class="quick-categories">
-      <div class="container">
-        <h2>商品快速分類</h2>
-        <div class="category-grid">
-          <a href="fresh-food.html" class="category-card"><span class="material-symbols-outlined">briefcase_meal</span> 鮮食專區</a>
-          <a href="cafe-drinks.html" class="category-card"><span class="material-symbols-outlined">local_cafe</span> 現煮咖啡</a>
-          <a href="snacks.html" class="category-card"><span class="material-symbols-outlined">udon</span> 零食泡麵</a>
-          <a href="lottery.html" class="category-card"><span class="material-symbols-outlined">featured_seasonal_and_gifts</span> 每日抽獎</a>
+      
+      <!-- 右側：商品資訊 -->
+      <div class="product-detail-info">
+        <span class="product-badge">人氣熱銷</span>
+        <h1 class="product-name">極致微波紅燒牛腩飯</h1>
+        <p class="product-desc">特選澳洲牛腩肉大塊慢火燉煮，搭配香甜紅蘿蔔與獨門秘製豆瓣醬汁，肉質軟嫩多汁、醬香四溢，淋在香 Q 白米飯上，是慰勞辛勞日常的極致美味。</p>
+        
+        <div class="product-price">$40</div>
+        
+        <div class="product-actions">
+          <input type="number" value="1" min="1" class="product-qty-input">
+          <button class="product-add-cart-btn"><span class="material-symbols-outlined shopping-cart">shopping_cart</span> 加入購物車</button>
         </div>
+        
+        <p class="product-shipping-note">💡 滿 $200 即可享門市取貨免運費。</p>
       </div>
-    </section>
-
-    <!-- 滾動式推薦商品 (Horizontal Scroll) -->
-    <section class="recommendations">
-      <div class="container">
-        <h2>🔥 熱門推薦商品</h2>
-        <div class="scroll-container">
-          <!-- 商品卡片 1 -->
-          <a href="product-detail-latte.html" class="scroll-card">
-            <div class="card-img"><img src="./images/Firefly_Latte_1.jpg" alt="" /></div>
-              <h3>特選重烘焙拿鐵</h3>
-              <p class="price">$20</p>
-          </a>
-          <!-- 商品卡片 2 -->
-          <a href="product-detail-beef-brisket-rice.html" class="scroll-card">
-            <div class="card-img"><img src="./images/eat_02.jpeg" alt="" /></div>
-            <h3>極致微波紅燒牛腩飯</h3>
-            <p class="price">$40</p>
-          </a>
-          <!-- 商品卡片 3 -->
-          <a href="product-detail-afternoon-tea.html" class="scroll-card">
-            <div class="card-img" ><img src="./images/tea_01.jpeg" alt="" /></div>
-            <h3>皇家錫蘭午後紅茶</h3>
-            <p class="price">$15</p>
-          </a>
-          <!-- 商品卡片 4 -->
-          <a href="product-detail-potato-chips.html" class="scroll-card">
-            <div class="card-img" ><img src="./images/eats_01.jpeg" alt="" /></div>
-            <h3>厚切海鹽洋芋片</h3>
-            <p class="price">$20</p>
-          </a>
-          <!-- 商品卡片 5 -->
-          <a href="product-detail-Ice-cream.html" class="scroll-card">
-            <div class="card-img" ><img src="./images/ice_01.jpeg" alt="" /></div>
-            <h3>北海道十勝限定冰淇淋</h3>
-            <p class="price">$28</p>
-          </a>
-          <!-- 商品卡片 6 -->
-          <a href="product-detail-cookie.html" class="scroll-card">
-            <div class="card-img" ><img src="./images/snacks_1.jpg" alt="" /></div>
-            <h3>巧克力夾心餅乾</h3>
-            <p class="price">$15</p>
-          </a>
-          <!-- 商品卡片 7 -->
-          <a href="product-detail-88-noodles.html" class="scroll-card">
-            <div class="card-img" ><img src="./images/snacks_noodles_1.jpg" alt="" /></div>
-            <h3>88杯麵</h3>
-            <p class="price">$22</p>
-          </a>
-          <!-- 商品卡片 8 -->
-          <a href="product-detail-instant-noodles.html" class="scroll-card">
-            <div class="card-img" ><img src="./images/snacks_noodles_3.jpg" alt="" /></div>
-            <h3>韓國進口辛辣麵</h3>
-            <p class="price">$18</p>
-          </a>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
 
   <!-- ================= 頁尾 (Footer) ================= -->
@@ -183,8 +123,6 @@
       <p>&copy; 2026 88便利店 版權所有.</p>
     </div>
   </footer>
-
-  <!-- 引入 JS (依照您的 js 資料夾架構) -->
   <script src="./js/main.js"></script>
 </body>
 </html>

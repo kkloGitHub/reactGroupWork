@@ -287,6 +287,17 @@
   aspect-ratio: 1 / 1;
   background-color: #ffd899;
   border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    display: block;
+    aspect-ratio: 4 / 3;
+    height: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
 }
 
 .product-detail-info {

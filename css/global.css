@@ -188,6 +188,7 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) {
   .desktop-nav { display: none; }
   .hamburger-btn { display: block; }
+  .logo .logo-text { display: none; }
 }
 /* 桌機版強制收起手機選單：
    即使切換視窗寬度後殘留 .active，也保證選單不會卡在畫面上 */
