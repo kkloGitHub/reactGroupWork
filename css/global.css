@@ -202,30 +202,41 @@ html {
   &:hover { color: var(--text-hover); }
  }
 .mobile-menu { 
-  position: absolute; left: 0; right: 0; top: 100%;
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  top: 100%;
   width: 100%;
-  max-height: 0; overflow: hidden;
-  /* 關閉時完全不可見，同時避免鍵盤 Tab 焦點跑到隱藏選單內 */
-  visibility: hidden;
-  display: flex; flex-direction: column; align-items: center;
+  padding: 20px 0;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
   background-color: var(--nav-bg); 
   border-top: 1px solid var(--border-color); 
-  transition: all 0.3s ease-in-out;
-  /* z-index: 100; */
-  .material-symbols-outlined {
-    transform: translateY(5px);
-  }
-}
-.mobile-menu.active {
-  /* 原本固定 400px 且 overflow: hidden，選單項目一多會被裁掉；
-     改為隨視窗高度並可捲動（行動裝置友善） */
-  max-height: 80vh;
-  /* 支援 dvh 的瀏覽器：扣除導覽列高度，避免選單底部被手機網址列遮住 */
-  max-height: calc(100dvh - 120px);
-  padding: 20px 0;
-  visibility: visible;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  max-height: calc(100dvh - 100px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
+  /* 預設隱藏狀態：向上微移 12px 並隱藏 */
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-12px);
+  pointer-events: none; /* 防止收起時誤觸按鈕 */
+
+  transition: opacity 0.25s ease,
+              transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              visibility 0.25s;
+  /* .material-symbols-outlined {
+    transform: translateY(5px);
+  } */
+}
+.mobile-menu.active {
+  /* 開啟狀態：復位並淡入 */
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
 .mobile-menu a {
