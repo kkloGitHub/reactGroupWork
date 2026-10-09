@@ -77,7 +77,19 @@
   transition: transform 0.2s;
   display: flex; 
   flex-direction: column;
-  img { display: block; width: auto; height: 100%; border-radius: 8px; text-align: center; margin: 0 auto 12px; }
+  .card-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img { 
+      display: block; 
+      width: auto; 
+      /* aspect-ratio: 4 / 3; */
+      height: 100%; 
+      border-radius: 8px; 
+    }
+  }
   h3 {
     flex-grow: 1;
   }
