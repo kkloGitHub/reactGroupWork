@@ -133,3 +133,8 @@
                 margin: 28px 0 12px;
             }
         }
+        @media (max-width: 480px) {
+            .policy-container .contact-block p:last-child {
+                font-size: 0.8rem;
+            }
+        }
