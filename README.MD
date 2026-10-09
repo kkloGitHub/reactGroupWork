@@ -161,7 +161,7 @@ reactGroupWork/
 ├── stores.html           # 門市查詢與地圖佔位
 ├── faq.html              # 常見問題 (HTML5 <details> 手風琴)
 ├── contact.html          # 客服與顧客反饋表單
-├── fresh-food.html       # 鮮食便當專區
+├── fresh-food.html       # 叮叮飯專區
 ├── cafe-drinks.html      # 現煮咖啡與飲品專區
 ├── snacks.html           # 零食與泡麵大賞
 ├── ecatalog.html         # 線上雙週 DM 特刊 (純 CSS 翻頁)
@@ -186,7 +186,7 @@ reactGroupWork/
 | **首頁與形象** | `index.html` | 品牌形象 Hero、快速分類入口、CSS Scroll Snap 熱門推薦商品 |
 | | `about.html` | 品牌歷程、使命宣言與企業永續 (ESG) 圖文排版 |
 | | `stores.html` | 門市查詢雙欄佈局 (Flexbox 清單滾動 + 地圖展示區) |
-| **商品型錄** | `fresh-food.html` | 鮮食便當商品網格展示 (CSS Grid) |
+| **商品型錄** | `fresh-food.html` | 叮叮飯商品網格展示 (CSS Grid) |
 | | `cafe-drinks.html` | 現煮咖啡與特調飲品目錄 |
 | | `snacks.html` | 零食、泡麵與進口食品列表 |
 | | `ecatalog.html` | 8 頁線上特刊 (Radio Button Hack 純 CSS 翻頁) |
